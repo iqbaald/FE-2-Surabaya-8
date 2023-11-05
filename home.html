@@ -2,10 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA_Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home | Walk to Talk Travel</title>
     <link rel="icon" type="image/png" href="Source/Img/titlelogo2.png" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/lightslider.css" />
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/lightslider.js"></script>
   </head>
   <body>
     <!-- -------Navbar Start------- -->
@@ -31,15 +35,15 @@
       </ul>
       <!-- Navbar Kanan -->
       <!-- Before login -->
-      <!-- <a href="#" class="btn">Get Started</a> -->
+      <a href="#" class="btn">Get Started</a>
       <!-- After Login -->
-      <div class="profile">
+      <!-- <div class="profile">
         <img src="Source/Img/profile.jpg" alt="foto profile" class="pp" />
         <span>Robert Openhamer</span>
         <i class="dropdown"
           ><img src="Source/Img/Icon/dropdown.png" alt="dropdown"
         /></i>
-      </div>
+      </div> -->
     </header>
     <!-- -------Navbar End------- -->
 
@@ -48,7 +52,6 @@
       <!-- Hero Start -->
       <section class="hero" id="hero">
         <div class="container">
-          <!-- <img src="Source/Img/Hero/home.png" alt="" /> -->
           <div class="hero-text">
             <span>Halo, Selamat Datang!</span>
             <h1>Ini akan menjadi pengalaman Anda yang tak terlupakan.</h1>
@@ -113,9 +116,8 @@
           <div class="heading">
             <h1>Rekomendasi Paket Travel</h1>
             <p>
-              Kami menawarkan beragam paket perjalanan yang dapat disesuaikan
+              Kami menawarkan beragam paket perjalanan yang dapat disesuaikan <br>
               dengan kebutuhan dan anggaran Anda
-            </p>
           </div>
           <!-- Paket Travel content -->
           <div class="product-container">
@@ -145,7 +147,6 @@
             <div class="box">
               <img src="Source/Img/Product/product3.png" alt="" />
               <h2>BANDA NEIRA (3D/2N)</h2>
-
               <p>Harga mulai dari:</p>
               <span>Rp 2.199.000 </span>
               <div class="location">
@@ -154,8 +155,12 @@
               </div>
             </div>
           </div>
+        </p>
+        <div>
           <a href="#" class="secondary-btn">Lihat Selengkapnya</a>
+      </div>
         </section>
+        
         <!-- Paket Travel End -->
 
         <!-- Partners Start -->
@@ -164,7 +169,7 @@
             <h1>Partner Kami</h1>
             <p>
               Kami telah berpartner dengan berbagai penyedia layanan travel,
-              mulai dari penerbangan, perkapalan hingga perhotelan
+              mulai <br> dari penerbangan, perkapalan hingga perhotelan
             </p>
           </div>
           <div class="partners-slider">
@@ -200,14 +205,14 @@
           <div class="heading">
             <h1>Layanan Transportasi</h1>
             <p>
-              Kami menawarkan beragam paket perjalanan yang dapat disesuaikan dengan kebutuhan dan anggaran Anda
+              Kami menawarkan beragam paket perjalanan yang dapat disesuaikan <br> dengan kebutuhan dan anggaran Anda
             </p>
           </div>
           <!-- Transportasi content -->
           <div class="product-container">
             <!-- box 1 -->
             <div class="box">
-              <img src="Source/Img/Transportasi/1" alt="" />
+              <img src="Source/Img/Transportasi/transportasi1.png" alt="" />
               <h2>Jakarta-Palembang</h2>
               <p>Harga mulai dari:</p>
               <span>Rp 599.000 </span>
@@ -218,7 +223,7 @@
             </div>
             <!-- box 2 -->
             <div class="box">
-              <img src="Source/Img/Transportasi/2" alt="" />
+              <img src="Source/Img/Transportasi/transportasi2.png" alt="" />
               <h2>Jakarta-Palembang</h2>
               <p>Harga mulai dari:</p>
               <span>Rp 599.000 </span>
@@ -229,7 +234,7 @@
             </div>
             <!-- box 3 -->
             <div class="box">
-              <img src="Source/Img/Transportasi/3" alt="" />
+              <img src="Source/Img/Transportasi/transportasi3.png" alt="" />
               <h2>Jakarta-Palembang</h2>
               <p>Harga mulai dari:</p>
               <span>Rp 599.000 </span>
@@ -242,8 +247,135 @@
           <a href="#" class="secondary-btn">Lihat Selengkapnya</a>
         </section>
         <!-- Transportasi End -->
+        
+          <!-- -------------Produk untuk explora ya------------- -->
+      <section class="travel" id="travel">
+        <div class="heading">
+          <h1>Rekomendasi Paket Travel</h1>
+          <p>
+            Kami menawarkan beragam paket perjalanan yang dapat disesuaikan <br>
+            dengan kebutuhan dan anggaran Anda
+        </div>
+        <!-- Paket Travel content -->
+        <div class="product-container">
+          <ul id="autoWidth" class="cs-hidden">
+            <!-- box 1 -->
+            <li class="item-a">
+          <div class="box">
+            <div class="img">
+              <img src="Source/Img/Product/product1.png" alt="" />
+              <!-- <div class="overlay">
+                <a href="#" class="buy-btn">Buy Now</a>
+              </div> -->
+            </div>
+            <div class="detail-box">
+              <h2>BANDA NEIRA (3D/2N)</h2>
+              <p>Harga mulai dari:</p>
+              <span>Rp 2.199.000 </span>
+              <div class="location">
+                <!-- <img src="Source/Img/Icon/location.png" alt="" /> -->
+                <p>Maluku</p>
+              </div>
+            </div>
+  
+          </div>
+            </li>
+      
+            <!-- box 2 -->
+            <li class="item-b">
+          <div class="box">
+            <img src="Source/Img/Product/product2.png" alt="" />
+            <h2>BANDA NEIRA (3D/2N)</h2>
+            <p>Harga mulai dari:</p>
+            <span>Rp 2.199.000 </span>
+            <div class="location">
+              <!-- <img src="Source/Img/Icon/location.png" alt="" /> -->
+              <p>Maluku</p>
+            </div>
+          </div>
+            </li>
+
+            <!-- box 3 -->
+            <li class="item-c">
+          <div class="box">
+            <img src="Source/Img/Product/product3.png" alt="" />
+            <h2>BANDA NEIRA (3D/2N)</h2>
+            <p>Harga mulai dari:</p>
+            <span>Rp 2.199.000 </span>
+            <div class="location">
+              <!-- <img src="Source/Img/Icon/location.png" alt="" /> -->
+              <p>Maluku</p>
+            </div>
+          </div>
+            </li>
+
+            <!-- box 4 -->
+            <li class="item-d">
+          <div class="box">
+            <img src="Source/Img/Transportasi/transportasi1.png" alt="" />
+            <h2>BANDA NEIRA (3D/2N)</h2>
+            <p>Harga mulai dari:</p>
+            <span>Rp 2.199.000 </span>
+            <div class="location">
+              <!-- <img src="Source/Img/Icon/location.png" alt="" /> -->
+              <p>Maluku</p>
+            </div>
+          </div>
+            </li>
+
+            <!-- box 5 -->
+            <li class="item-f">
+          <div class="box">
+            <img src="Source/Img/Transportasi/transportasi2.png" alt="" />
+            <h2>BANDA NEIRA (3D/2N)</h2>
+            <p>Harga mulai dari:</p>
+            <span>Rp 2.199.000 </span>
+            <div class="location">
+              <!-- <img src="Source/Img/Icon/location.png" alt="" /> -->
+              <p>Maluku</p>
+            </div>
+          </div>
+            </li>
+            
+            <!-- box 6 -->
+            <li class="item-g">
+          <div class="box">
+            <img src="Source/Img/Transportasi/transportasi3.png" alt="" />
+            <h2>BANDA NEIRA (3D/2N)</h2>
+            <p>Harga mulai dari:</p>
+            <span>Rp 2.199.000 </span>
+            <div class="location">
+              <!-- <img src="Source/Img/Icon/location.png" alt="" /> -->
+              <p>Maluku</p>
+            </div>
+          </div>
+            </li>
+
+            <!-- box 7 -->
+            <li class="item-h">
+          <div class="box">
+            <img src="Source/Img/Product/product3.png" alt="" />
+            <h2>BANDA NEIRA (3D/2N)</h2>
+            <p>Harga mulai dari:</p>
+            <span>Rp 2.199.000 </span>
+            <div class="location">
+              <!-- <img src="Source/Img/Icon/location.png" alt="" /> -->
+              <p>Maluku</p>
+            </div>
+          </div>
+            </li>
+          </ul>
+          
+        </div>
       </section>
+      <!-- -------------Produk untuk explora ya------------- -->
+    
+      </section>
+      
     </section>
     <!-- -------Home End------- -->
+    
+     <!-- -------Javascript------- -->
+    <script type="text/javascript" src="js/script.js"></script>
   </body>
 </html>
