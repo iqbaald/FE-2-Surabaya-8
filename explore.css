@@ -1,0 +1,416 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+*{
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    scroll-padding-top: 32px;
+    scroll-behavior: smooth;
+}
+:root{
+    --yellow-color: #FFD729;
+    --light-yellow-color: #ffe676;
+    --text-color: #030303;
+    --bg-color: #fff;
+}
+section {
+    padding: 0 0 24px ;
+}
+img{
+    width: 100%;
+}
+body{
+    color: var(--text-color);
+    align-items: center;
+    justify-content: center;
+}
+header {
+    /* position: fixed; */
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--bg-color);
+    box-shadow: 0 8px 11px rgb(14 55 54 / 15%);
+    padding: 16px 165px;
+    transition: 0.5s;
+    position: fixed;
+}
+.profile{
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    cursor: pointer;
+}
+.profile .pp{
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+}
+.profile .dropdown {
+    width: 16px;
+    /* height: 10px; */
+    object-fit: cover;
+    object-position: center;
+}
+.profile span {
+    font-size: 16px;
+    font-weight: 500;
+}
+.logo img{
+    height: 68px;
+    width: 219px;
+}
+.navbar {
+    display: flex;
+}
+.navbar a {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text-color);
+    padding: 8px 12px;
+}
+.navbar a:hover, .navbar .active {
+    /* background: var(--yellow-color);
+    border-radius: 80px; */
+    font-weight: bolder;
+    transition: 0.5s;
+}
+#menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10001;
+    display: none;
+}
+.home {
+    background-image: url(Source/Img/Hero/explore.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top;
+    overflow: hidden;
+}
+/* Hero */
+.container {
+    position: relative;
+    width: 100%;
+    /* min-height: 1022px; */
+    display: block;
+    align-items: center;
+}
+.container img {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+.hero-text {
+    color: var(--bg-color);
+    margin: 140px;
+    padding-top: 32px;
+}
+.hero span {
+    font-size: 32px;
+    font-weight: 600;
+}
+.hero h1 {
+    margin: 16px 0;
+    margin-top: 50px;
+    font-size: 60px;
+    font-weight: 600;
+    line-height: 1;
+    text-align: center;
+}
+.hero p {
+    font-size: 30px;
+    color:white;
+    font-weight: bold;
+    line-height: 40px;
+    text-align: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+.btn {
+    font-size: 24px;
+    padding: 16px 32px ;
+    color: var(--text-color);
+    background: var(--yellow-color);
+    font-weight: bolder;
+    border-radius: 16px;
+    align-items: center;
+    justify-content: center;
+}
+/* Content Container */
+.content-container {
+    width: 1109px;
+    height: 4806px;
+    flex-shrink: 0;
+    margin: 0 160px;
+    padding: 0px;
+    background-color: var(--bg-color);
+    border-radius: 65px;
+}
+
+/* Categories */
+.heading {
+    text-align:  center;
+    justify-content: center;
+}
+.heading h1{
+    font-size: 40px;
+    font-weight: 1000;
+    /* margin-bottom: 50px; */
+}
+.heading p {
+    font-size: 16px;
+    padding: 24px;
+}
+.categories-container {
+    display: flex;
+    justify-content: center;
+    gap: 24px; 
+
+    /* grid-template-columns: repeat(auto-fit),minmax(180px,auto);
+    gap: 16px;*/
+}
+
+/* paket desti */
+.desti {
+    text-align:  center;
+    justify-content: center;
+}
+.desti h1{
+    margin-top: 600px;
+    font-size: 40px;
+    font-weight: 1000;
+
+}
+.text-desti {
+    font-size: 16px;
+    padding: 24px;
+    margin-bottom: 30px;
+    line-height: 30px;
+}
+.box {
+    background: var(--bg-color);
+    border-radius: 16px;
+    padding: 24px;
+    gap: 16px;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.categories-container .box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 346px;
+    width: 274px;
+    border: 0.5rem;
+}
+.categories-container .box img {
+    width: 100%;
+    height: 100px;
+    object-fit: contain;
+}
+.box h2 {
+    font-size: 16px;
+    font-weight: bolder;
+    margin-top: 12px;
+}
+.box p {
+    font-size: 14px;
+    margin-top: 12px;
+}
+.box span {
+    font-size: 14px;
+    margin-top: px;
+}
+
+/* AKOMODASI */
+.akomodasi {
+    text-align:  center;
+    justify-content: center;
+}
+
+.akomodasi h1{
+    margin-top: 100px;
+    font-size: 40px;
+    font-weight: 1000;
+}
+
+.text-akomodasi {
+    font-size: 16px;
+    padding: 24px;
+    margin-bottom: 30px;
+    line-height: 30px;
+}
+.box {
+    background: var(--bg-color);
+    border-radius: 16px;
+    padding: 24px;
+    gap: 16px;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.categories-container .box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 346px;
+    width: 274px;
+    border: 0.5rem;
+}
+.categories-container .box img {
+    width: 100%;
+    height: 100px;
+    object-fit: contain;
+}
+.box h2 {
+    font-size: 16px;
+    font-weight: bolder;
+    margin-top: 12px;
+}
+.box p {
+    font-size: 14px;
+    margin-top: 12px;
+}
+.box span {
+    font-size: 14px;
+    margin-top: px;
+}
+
+/* TRANSPORTASI */
+.transportasi {
+    text-align:  center;
+    justify-content: center;
+}
+
+.transportasi h1{
+    margin-top: 100px;
+    font-size: 40px;
+    font-weight: 1000;
+}
+
+.text-transportasi {
+    font-size: 16px;
+    padding: 24px;
+    margin-bottom: 30px;
+    line-height: 30px;
+}
+
+.box {
+    background: var(--bg-color);
+    border-radius: 16px;
+    padding: 24px;
+    gap: 16px;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.categories-container .box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 346px;
+    width: 274px;
+    border: 0.5rem;
+}
+.categories-container .box img {
+    width: 100%;
+    height: 100px;
+    object-fit: contain;
+}
+.box h2 {
+    font-size: 16px;
+    font-weight: bolder;
+    margin-top: 12px;
+}
+.box p {
+    font-size: 14px;
+    margin-top: 12px;
+}
+.box span {
+    font-size: 14px;
+    margin-top: px;
+}
+
+/* FAQ */
+.FAQ {
+    text-align:  center;
+    justify-content: center;
+}
+
+.FAQ h1{
+    margin-top: 100px;
+    font-size: 40px;
+    font-weight: 1000;
+}
+
+.text-FAQ {
+    font-size: 16px;
+    padding: 24px;
+    margin-bottom: 30px;
+    line-height: 30px;
+}
+
+/* contoh */
+.contoh {
+    text-align:  center;
+    justify-content: center;
+}
+
+.contoh h1{
+    margin-top: 0px;
+    font-size: 40px;
+    font-weight: 1000;
+}
+
+.text-contoh {
+    font-size: 16px;
+    padding: 24px;
+    margin-bottom: 30px;
+    line-height: 30px;
+}
+.slider {
+    width: 100%;
+    overflow:scroll;
+   
+  }
+  .product-container {
+    display: flex;
+    width: 100%; /* Atur sesuai jumlah box yang ingin Anda tampilkan */
+    transition: transform 0.5s ease; /* Efek transisi ketika slider digeser */
+  }
+/* Paket Travel */
+.product-container .box img {
+    width: 100%;
+    height: 196px;
+    object-fit: cover;
+    background: #000;
+}
+.product-container {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+}
+.product-container .box{
+    padding: 16px;
+    text-align: start;
+}
+.product-container h2 {
+    font: 16px;
+    font: bolder;
+}
+.product-container span {
+    font-size: 20px;
+    font-weight: bolder;
+    color: red;
+}
