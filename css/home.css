@@ -376,8 +376,9 @@ form button:hover {
 }
 .hero-text {
     color: var(--bg-color);
-    margin: 165px;
+    margin: 165px ;
     padding-top: 32px;
+    margin-bottom: 64px;
 }
 .hero span {
     font-size: 32px;
@@ -404,6 +405,7 @@ form button:hover {
     justify-content: center;
     cursor: pointer;
 }
+
 .btn:hover {
     background: var(--dark-yellow-color);
 }
@@ -518,7 +520,7 @@ form button:hover {
     margin: auto;
     overflow: hidden;
     position: relative;
-    width: 1080px;
+    width: auto;
 }
 .partners-slider .slider-track {
     animation: scroll 40s linear infinite;

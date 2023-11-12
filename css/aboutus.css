@@ -102,7 +102,7 @@ header {
 }
 
 .home {
-    background-image: url(/Source/Img/Hero/explore.png);
+    background-image: url(/Source/Img/Hero/aboutus.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: top;
@@ -379,6 +379,7 @@ form button:hover {
     margin: 165px;
     padding-top: 32px;
     text-align: center;
+    margin-bottom: 100px;
 }
 .hero span {
     font-size: 32px;
@@ -390,10 +391,23 @@ form button:hover {
     font-weight: 600;
     line-height: 1;
 }
-.hero p {
-    font-size: 24px;
-    margin-bottom: 42px;
+.heading {
+    margin: 32px;
 }
+.company .heading h1, .visi .heading h1  {
+    margin-bottom: 32px;
+}
+.visi h2 {
+    background-image: url(/Source/Img/Icon/petik.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 70px;
+}
+.company .heading p {
+    font-size: 16px;
+    padding: 0;
+}
+
 .btn {
     font-size: 24px;
     padding: 16px 32px ;
@@ -484,37 +498,36 @@ form button:hover {
     font-size: 14px;
 }
 
-/* ***********Rekomendasi Paket*********** */
-.product-container .box img {
-    width: 265px;
-    height: 196px;
-    object-fit: cover;
-    background: #000;
-}
+/* ***********Team Kami********** */
 .product-container {
     display: flex;
     justify-content: center;
     gap: 32px;
+    margin-bottom: 32px;
+}
+.product-container .box img {
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 16px;
 }
 .product-container .box{
     padding: 16px;
-    text-align: start;
+    text-align: center;
+    height: 350px;
 }
 .product-container h2 {
-    font: 16px;
+    font-size: 20px;
     font: bolder;
+    margin: 8px;
 }
 .product-container span {
-    font-size: 20px;
-    font-weight: bolder;
-    color: red;
+    font-size: 16px;
+    font-weight: lighter;
+    text-transform: uppercase  ;
+    color: var(--dark-yellow-color);
 }
 /* ***********Partner Kami*********** */
-#partners {
-    width: 100%;
-    overflow: hidden;
-}
-
 @keyframes scroll {
 	0% { transform: translateX(0); }
 	100% { transform: translateX(calc(-150px * 7))}
@@ -522,7 +535,7 @@ form button:hover {
 .partners-slider {
     height: 100px;
     width: 1000px;
-    margin: 0;
+    margin: auto;
     overflow: hidden;
     position: relative;
 }

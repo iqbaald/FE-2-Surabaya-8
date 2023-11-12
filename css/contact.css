@@ -100,15 +100,6 @@ header {
 .navbar .login-btn:hover {
     background: var(--dark-yellow-color);
 }
-
-.home {
-    background-image: url(/Source/Img/Hero/explore.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: top;
-    overflow: hidden;
-}
-
 .profile{
     display: flex;
     align-items: center;
@@ -360,40 +351,6 @@ form button:hover {
     margin-right: 7px;
 }
 
-/* ----------------Hero---------------- */
-.container {
-    position: relative;
-    width: 100%;
-    /* min-height: 1022px; */
-    display: block;
-    align-items: center;
-}
-.container img {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    overflow: hidden;
-}
-.hero-text {
-    color: var(--bg-color);
-    margin: 165px;
-    padding-top: 32px;
-    text-align: center;
-}
-.hero span {
-    font-size: 32px;
-    font-weight: 600;
-}
-.hero h1 {
-    margin: 16px 0;
-    font-size: 56px;
-    font-weight: 600;
-    line-height: 1;
-}
-.hero p {
-    font-size: 24px;
-    margin-bottom: 42px;
-}
 .btn {
     font-size: 24px;
     padding: 16px 32px ;
@@ -425,96 +382,144 @@ form button:hover {
     background-color: var(--grey-color);
 }
 
-/* ----------------Content Container---------------- */
-.content-container {
-    margin: 0px 165px;
-    padding: 0px 64px;
-    background-color: var(--bg-color);
-    border-radius: 65px;
-} 
-/* ***********Services*********** */
-.heading {
-    padding-top: 64px;
-    text-align:  center;
-    justify-content: center;
-}
-.heading h1{
-    font-size: 40px;
-    font-weight: 1000;
-}
-.heading p {
-    font-size: 16px;
-    padding: 24px 64px;
-}
-.categories-container {
+/* Contact */
+.contact
+{
+    position: relative;
+    min-height: 100vh;
+    padding: 50px 100px;
     display: flex;
     justify-content: center;
-    gap: 24px; 
-
-    /* grid-template-columns: repeat(auto-fit),minmax(180px,auto);
-    gap: 16px;*/
+    align-items: center;
+    flex-direction: column;
+    background: url(/Source/Img/Hero/contactus.png);
+    background-size: cover;
 }
-.box {
-    background: var(--bg-color);
-    border-radius: 16px;
-    padding: 24px;
-    gap: 16px;
+.contact .content
+{
+    max-width: 900px;
     text-align: center;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-.categories-container .box {
-    position: relative;
+.contact .content h2
+{
+    margin-bottom: 7px;
+    font-size: 30px;
+    font-weight: 500;
+    color:#fff;
+}
+.contact .content p
+{
+    font-weight: 300;
+    color:#fff;
+}
+.container
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+.container .contactInfo
+{
+    width: 50%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    height: 346px;
-    width: 274px;
-    border: 0.5rem;
 }
-.categories-container .box img {
-    width: 100%;
-    height: 100px;
-    object-fit: contain;
+.container .contactInfo .box
+{
+    position: relative;
+    padding: 20px 0;
+    display: flex;
 }
-.box h2 {
-    font-size: 16px;
-    font-weight: bolder;
-}
-.box p {
-    font-size: 14px;
-}
-
-/* ***********Rekomendasi Paket*********** */
-.product-container .box img {
-    width: 265px;
-    height: 196px;
-    object-fit: cover;
-    background: #000;
-}
-.product-container {
+.container .contactInfo .box .icon
+{
+    min-width: 60px;
+    height: 60px;
+    background: #fff;
     display: flex;
     justify-content: center;
-    gap: 32px;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
 }
-.product-container .box{
-    padding: 16px;
-    text-align: start;
+.container .contactInfo .box .text
+{
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    color: #fff;
+    flex-direction: column;
+    font-weight: 300;
+    
 }
-.product-container h2 {
-    font: 16px;
-    font: bolder;
+.container .contactInfo .box .text h3
+{
+    font-weight: 500;
+    color: #FFD729;
 }
-.product-container span {
-    font-size: 20px;
-    font-weight: bolder;
-    color: red;
+.contactForm
+{
+    width: 40%;
+    padding: 40px;
+    background:#fff;
 }
-/* ***********Partner Kami*********** */
-#partners {
+.contactForm h2
+{
+    font-size: 30px;
+    color:#333;
+    font-weight: 500;
+}
+.contactForm .inputBox
+{
+    position: relative;
     width: 100%;
-    overflow: hidden;
+    margin-top: 10px;
+}
+.contactForm .inputBox input,
+.contactForm .inputBox textarea
+{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+}
+.contactForm .inputBox span
+{
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 5px 0;
+    pointer-events: none;
+    transition: 0,5s;
+    color:#666;
+}
+.contactForm .inputBox input:focus ~ span,
+.contactForm .inputBox input:valid ~ span,
+.contactForm .inputBox textarea:focus ~ span,
+.contactForm .inputBox textarea:valid ~ span
+{
+    color:#e91e63;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+.contactForm .inputBox input[type="submit"]
+{
+    width: 100px;
+    background: #FFD729;
+    color: #333;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
 }
 
+/* ***********Partner Kami*********** */
 @keyframes scroll {
 	0% { transform: translateX(0); }
 	100% { transform: translateX(calc(-150px * 7))}
@@ -522,7 +527,7 @@ form button:hover {
 .partners-slider {
     height: 100px;
     width: 1000px;
-    margin: 0;
+    margin: auto;
     overflow: hidden;
     position: relative;
 }
@@ -536,39 +541,6 @@ form button:hover {
     width: auto;
     margin: 24px;
 }
-
-/* ***********FAQ*********** */
-.faq-container {
-    text-align:  center;
-    justify-content: center;
-}
-
-/* .faq-box {
-    position: absolute;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 40px;
-    display: inline-flex;
-    width: 225px;
-    height: 246px;
-    left: 0;
-    top: 0;
-    background: var(--yellow-color);
-    border-radius: 30px;
-} */
-
-.faq h1{
-    margin-top: 64px;
-    font-size: 40px;
-    font-weight: 1000;
-}
-.text-faq {
-    font-size: 16px;
-    padding: 24px;
-    margin-bottom: 30px;
-    line-height: 30px;
-}
-
 
 /* ----------------Footer---------------- */
 footer {
@@ -732,6 +704,24 @@ footer .bottom-section {
     .navbar .login-btn {
         font-size: 0.9rem;
         padding: 7px 10px;
+    }
+
+    .contact
+    {
+        padding: 50px;
+    }
+    .container
+    {
+        flex-direction: column;
+    }
+    .container .contactInfo
+    {
+        margin-bottom: 40px;
+    }
+    .container .contactInfo,
+    .contactForm
+    {
+        width: 100%;
     }
 }
 

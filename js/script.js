@@ -40,3 +40,14 @@ $(document).ready(function() {
         } 
     });  
 });
+
+// Light Slider 2
+$(document).ready(function() {
+    $('#autoWidthh').lightSlider({
+        autoWidth:true,
+        loop:true,
+        onSliderLoad: function() {
+            $('#autoWidthh').removeClass('cS-hidden');
+        } 
+    });  
+});
