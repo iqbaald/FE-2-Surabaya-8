@@ -798,6 +798,24 @@ footer .bottom-section {
   .heading h1 {
     padding: 0;
   }
+  .categories-container {
+    display: inline-block;
+  }
+  .categories-container .box {
+    align-items: center;
+    width: fit-content;
+    margin: 30px;
+  }
+  .travel {
+    padding: 7px;
+  }
+  .product-container {
+    margin: 0;
+    padding: 24px;
+  }
+  .secondary-btn {
+    margin: 24px;
+  }
 }
 
 @media (max-width: 760px) {
