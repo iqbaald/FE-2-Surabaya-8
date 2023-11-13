@@ -533,6 +533,17 @@ form button:hover {
   object-fit: fill;
   margin-right: 4px;
 }
+.product-container .product-box h1 {
+  background-color: var(--yellow-color);
+  width: 67px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 12px;
+  border-radius: 4px;
+  margin: 0px;
+  cursor: pointer;
+}
 .product-container .product-box .cart {
   background-color: var(--yellow-color);
   width: 45px;

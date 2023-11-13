@@ -157,13 +157,13 @@
 .lSAction > a {
   width: 32px;
   display: block;
-  top: 0%;
+  top: 50%;
   height: 32px;
   background-image: url("/Source/Img/Icon/controls.png");
   cursor: pointer;
   position: absolute;
   z-index: 2;
-  /* margin-top: -16px; */
+  margin-top: -16px;
   opacity: 0.5;
   -webkit-transition: opacity 0.35s linear 0s;
   transition: opacity 0.35s linear 0s;

@@ -795,6 +795,59 @@ footer .bottom-section {
   .hero p {
     font-size: 16px;
   }
+
+  .home {
+    background-size: 100vh 100vh;
+  }
+
+  .hero h1 {
+    margin-bottom: 10px;
+    font-size: 35px;
+    font-weight: bolder;
+    line-height: 1.5;
+  }
+  .hero-text p {
+    margin-bottom: 150px;
+  }
+
+  .budaya {
+    margin: 0;
+  }
+  .img-grid {
+    display: inline-block;
+  }
+  .img-grid .img-budaya {
+    margin-bottom: 20px;
+    height: 300px;
+    width: auto;
+    margin: 30px;
+    object-fit: c;
+  }
+  .content-container {
+    margin: 0;
+    padding: 0;
+  }
+  .heading h1 {
+    padding: 0;
+  }
+  .categories-container {
+    display: inline-block;
+  }
+  .categories-container .box {
+    align-items: center;
+    width: fit-content;
+    margin: 30px;
+  }
+  .travel {
+    padding: 7px;
+  }
+  .product-container {
+    margin: 0;
+    padding: 24px;
+  }
+  .secondary-btn {
+    margin: 24px;
+  }
 }
 
 @media (max-width: 760px) {
