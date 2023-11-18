@@ -534,6 +534,7 @@ form button:hover {
   height: 196px;
   object-fit: cover;
   background: #000;
+  position: relative;
 }
 .product-container {
   display: flex;
@@ -543,6 +544,7 @@ form button:hover {
 .product-container .box {
   padding: 16px;
   text-align: start;
+  position: relative;
 }
 .product-container h2 {
   font: 16px;
@@ -552,6 +554,46 @@ form button:hover {
   font-size: 20px;
   font-weight: bolder;
   color: red;
+}
+.product-container .box .location {
+  display: flex;
+}
+.product-container .box .detail-box .location .icon {
+  padding: 2px;
+  max-width: 16px;
+  max-height: 16px;
+  vertical-align: top;
+  object-fit: contain;
+  margin-right: 4px;
+  background-color: var(--bg-color);
+}
+.product-container .box h1 {
+  background-color: var(--yellow-color);
+  width: 67px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 12px;
+  border-radius: 4px;
+  margin: 0px;
+  cursor: pointer;
+}
+.product-container .box .cart {
+  background-color: var(--yellow-color);
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 12px;
+  border-radius: 4px;
+  margin: 16px;
+  cursor: pointer;
+}
+.product-container .box .cart img {
+  background-color: transparent;
+  max-width: 100%;
+  max-height: 100%;
 }
 /* ***********Partner Kami*********** */
 #partners {

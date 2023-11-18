@@ -6,6 +6,12 @@ const formPopup = document.querySelector(".form-popup");
 const hidePopupBtn = formPopup.querySelector(".close-btn");
 const signupLoginLink = formPopup.querySelectorAll(".bottom-link a");
 
+// profile menu
+let subUntukMenu = document.getElementById("subMenu");
+
+function toggleMenu() {
+  subUntukMenu.classList.toggle("open-menu");
+}
 // Show mobile menu
 hamburgerBtn.addEventListener("click", () => {
   navbarMenu.classList.toggle("show-menu");
@@ -57,3 +63,28 @@ $(document).ready(function () {
 function newFunction() {
   return "subMenu";
 }
+
+// Detail Page
+const imgs = document.querySelectorAll(".img-select a");
+const imgBtns = [...imgs];
+let imgId = 1;
+
+imgBtns.forEach((imgItem) => {
+  imgItem.addEventListener("click", (event) => {
+    event.preventDefault();
+    imgId = imgItem.dataset.id;
+    slideImage();
+  });
+});
+
+function slideImage() {
+  const displayWidth = document.querySelector(
+    ".img-showcase img:first-child"
+  ).clientWidth;
+
+  document.querySelector(".img-showcase").style.transform = `translateX(${
+    -(imgId - 1) * displayWidth
+  }px)`;
+}
+
+window.addEventListener("resize", slideImage);
