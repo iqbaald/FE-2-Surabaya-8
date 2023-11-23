@@ -83,11 +83,11 @@
                 <h2>LOGIN</h2>
                 <form action="#">
                     <div class="input-field">
-                        <input type="text" required>
+                        <input type="text" id="email" required>
                         <label>Email/Username</label>
                     </div>
                     <div class="input-field">
-                        <input type="password" required>
+                        <input type="password" id="password" required>
                         <label>Kata Sandi</label>
                     </div>
                     <a href="#" class="forgot-pass-link">Lupa kata sandi?</a>
@@ -108,19 +108,19 @@
                 <h2>SIGN UP</h2>
                 <form action="#">
                     <div class="input-field">
-                        <input type="text" required>
+                        <input type="text" id="name" required>
                         <label>Buat Username</label>
                     </div>
                     <div class="input-field">
-                        <input type="text" required>
+                        <input type="text" id="email" required>
                         <label>Masukkan email Anda</label>
                     </div>
                     <div class="input-field">
-                        <input type="password" required>
+                        <input type="password" id="password" required>
                         <label>Buat kata sandi</label>
                     </div>
                     <div class="input-field">
-                        <input type="password" required>
+                        <input type="password" id="confirmPassword" required>
                         <label>Tulis ulang kata sandi</label>
                     </div>
                     <div class="policy-text">
@@ -216,23 +216,25 @@
               dengan kebutuhan dan anggaran Anda
           </div>
           <!-- Paket Travel content -->
-          <div class="product-container">
+          <div class="product-container" id="productContainer">
+
             <!-- product-box 1 -->
-            <div class="product-box">
+            <!-- <div class="product-box">
               <img src="Source/Img/Product/product1.png" alt="" />
               <h2>BANDA NEIRA (3D/2N)</h2>
               <p>Harga mulai dari:</p>
               <span>Rp 2.199.000 </span>
               <div class="location">
-                <div><img src="Source/Img/Icon/location.png" alt="" class="icon" /></div>
+                <div>
+                  <img src="Source/Img/Icon/location.png" alt="" class="icon" /></div>
              <div><p>Maluku</p></div>
               </div>
               <a href="detail.html"  class="cart">
                 <img src="Source/Img/Icon/cart.png" alt="">
               </a>
-            </div>
+            </div> -->
             <!-- product-box 2 -->
-            <div class="product-box">
+            <!-- <div class="product-box">
               <img src="Source/Img/Product/product2.png" alt="" />
               <h2>BANDA NEIRA (3D/2N)</h2>
               <p>Harga mulai dari:</p>
@@ -244,9 +246,9 @@
               <a href="detail.html"  class="cart">
                 <img src="Source/Img/Icon/cart.png" alt="">
               </a>
-            </div>
+            </div> -->
             <!-- product-box 3 -->
-            <div class="product-box">
+            <!-- <div class="product-box">
               <img src="Source/Img/Product/product3.png" alt="" />
               <h2>BANDA NEIRA (3D/2N)</h2>
               <p>Harga mulai dari:</p>
@@ -258,7 +260,7 @@
               <a href="detail.html"  class="cart">
                 <img src="Source/Img/Icon/cart.png" alt="">
               </a>
-            </div>
+            </div> -->
           </div>
         </p>
         <div>
@@ -330,9 +332,9 @@
             dengan kebutuhan dan anggaran Anda
         </div>
         <!-- Paket Travel content -->
-        <div class="product-container">
+        <div class="product-container" id="productContainer2">
           <!-- product-box 1 -->
-          <div class="product-box">
+          <!-- <div class="product-box">
             <img src="Source/Img/Product/product1.png" alt="" />
             <h2>BANDA NEIRA (3D/2N)</h2>
             <p>Harga mulai dari:</p>
@@ -344,9 +346,9 @@
             <a href="detail.html"  class="cart">
               <img src="Source/Img/Icon/cart.png" alt="">
           </a>
-          </div>
+          </div> -->
           <!-- product-box 2 -->
-          <div class="product-box">
+          <!-- <div class="product-box">
             <img src="Source/Img/Product/product2.png" alt="" />
             <h2>BANDA NEIRA (3D/2N)</h2>
             <p>Harga mulai dari:</p>
@@ -358,9 +360,9 @@
             <a href="detail" class="cart" >
               <img src="Source/Img/Icon/cart.png" alt="">
              </a>
-          </div>
+          </div> -->
           <!-- product-box 3 -->
-          <div class="product-box">
+          <!-- <div class="product-box">
             <img src="Source/Img/Product/product3.png" alt="" />
             <h2>BANDA NEIRA (3D/2N)</h2>
             <p>Harga mulai dari:</p>
@@ -372,7 +374,7 @@
             <a href="detail.html" class="cart">
               <img src="Source/Img/Icon/cart.png" alt="">
           </a>
-          </div>
+          </div> -->
         </div>
       <div>
         <a href="explore.html" class="secondary-btn">Lihat Selengkapnya</a>
@@ -450,6 +452,8 @@
     
     <!-- -------Javascript------- -->
     <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/productbox1_home.js"></script>
+    <script type="text/javascript" src="js/productbox2_home.js"></script>
   </body>
 </html>
 

@@ -67,11 +67,11 @@
           <h2>LOGIN</h2>
           <form action="#">
             <div class="input-field">
-              <input type="text" required />
+              <input type="text" id="email-login" required />
               <label>Email/Username</label>
             </div>
             <div class="input-field">
-              <input type="password" required />
+              <input type="password" id="password-login" required />
               <label>Kata Sandi</label>
             </div>
             <a href="#" class="forgot-pass-link">Lupa kata sandi?</a>
@@ -94,19 +94,19 @@
           <h2>SIGN UP</h2>
           <form action="#">
             <div class="input-field">
-              <input type="text" required />
+              <input type="text" id="name-signup" required />
               <label>Buat Username</label>
             </div>
             <div class="input-field">
-              <input type="text" required />
+              <input type="text" id="email-signup" required />
               <label>Masukkan email Anda</label>
             </div>
             <div class="input-field">
-              <input type="password" required />
+              <input type="password" id="password-signup" required />
               <label>Buat kata sandi</label>
             </div>
             <div class="input-field">
-              <input type="password" required />
+              <input type="password" id="confirm-password-signup" required />
               <label>Tulis ulang kata sandi</label>
             </div>
             <div class="policy-text">
@@ -126,6 +126,7 @@
       </div>
     </div>
     <!-- ---Popup End--- -->
+
     <!-- -------Navbar End------- -->
 
     <!-- -------Home Start------- -->
@@ -157,8 +158,9 @@
               dengan kebutuhan dan anggaran Anda
             </p>
           </div>
-          <div class="img-grid">
-            <a href="detail.html" class="img-budaya">
+          <!-- image grid -->
+          <div class="img-grid" id="img-grid"> 
+            <!-- <a href="detail.html" class="img-budaya">
               <img src="Source/Img/Product/jawa.png" alt="" />
               <div class="overlay">Jawa</div>
             </a>
@@ -173,13 +175,13 @@
             <a href="detail.html" class="img-budaya">
               <img src="Source/Img/Product/papua.png" alt="" />
               <div class="overlay">Papua</div>
-            </a>
+            </a> -->
           </div>
         </section>
         <!-- Paket Budaya End -->
 
         <!-- Paket Travel Start -->
-        <section class="travel" id="travel">
+        <section class="travel" id="travel2">
           <div class="heading">
             <h1>Paket Wisata Naisonal</h1>
             <p>
@@ -189,200 +191,7 @@
             </p>
           </div>
 
-          <!-- Paket Travel content -->
-          <div class="product-container">
-            <ul id="autoWidth" class="cs-hidden">
-              <!-- box 1 -->
-              <li class="item-a">
-                <div class="box">
-                  <div class="img">
-                    <img src="Source/Img/Product/product1.png" alt="" />
-                  </div>
-                  <div class="detail-box">
-                    <h2>BANDA NEIRA (3D/2N)</h2>
-                    <p>Harga mulai dari:</p>
-                    <span>Rp 2.199.000 </span>
-                    <div class="location">
-                      <div>
-                        <img
-                          src="Source/Img/Icon/location.png"
-                          alt=""
-                          class="icon"
-                        />
-                      </div>
-                      <div><p>Maluku</p></div>
-                    </div>
-                    <a href="detail.html" class="cart">
-                      <img src="Source/Img/Icon/cart.png" alt="" />
-                    </a>
-                  </div>
-                </div>
-              </li>
-
-              <!-- box 2 -->
-              <li class="item-b">
-                <div class="box">
-                  <div class="img">
-                    <img src="Source/Img/Product/product1.png" alt="" />
-                  </div>
-                  <div class="detail-box">
-                    <h2>BANDA NEIRA (3D/2N)</h2>
-                    <p>Harga mulai dari:</p>
-                    <span>Rp 2.199.000 </span>
-                    <div class="location">
-                      <div>
-                        <img
-                          src="Source/Img/Icon/location.png"
-                          alt=""
-                          class="icon"
-                        />
-                      </div>
-                      <div><p>Maluku</p></div>
-                    </div>
-                    <a href="detail.html" class="cart">
-                      <img src="Source/Img/Icon/cart.png" alt="" />
-                    </a>
-                  </div>
-                </div>
-              </li>
-
-              <!-- box 3 -->
-              <li class="item-c">
-                <div class="box">
-                  <div class="img">
-                    <img src="Source/Img/Product/product1.png" alt="" />
-                  </div>
-                  <div class="detail-box">
-                    <h2>BANDA NEIRA (3D/2N)</h2>
-                    <p>Harga mulai dari:</p>
-                    <span>Rp 2.199.000 </span>
-                    <div class="location">
-                      <div>
-                        <img
-                          src="Source/Img/Icon/location.png"
-                          alt=""
-                          class="icon"
-                        />
-                      </div>
-                      <div><p>Maluku</p></div>
-                    </div>
-                    <a href="detail.html" class="cart">
-                      <img src="Source/Img/Icon/cart.png" alt="" />
-                    </a>
-                  </div>
-                </div>
-              </li>
-
-              <!-- box 4 -->
-              <li class="item-d">
-                <div class="box">
-                  <div class="img">
-                    <img src="Source/Img/Product/product1.png" alt="" />
-                  </div>
-                  <div class="detail-box">
-                    <h2>BANDA NEIRA (3D/2N)</h2>
-                    <p>Harga mulai dari:</p>
-                    <span>Rp 2.199.000 </span>
-                    <div class="location">
-                      <div>
-                        <img
-                          src="Source/Img/Icon/location.png"
-                          alt=""
-                          class="icon"
-                        />
-                      </div>
-                      <div><p>Maluku</p></div>
-                    </div>
-                    <a href="detail.html" class="cart">
-                      <img src="Source/Img/Icon/cart.png" alt="" />
-                    </a>
-                  </div>
-                </div>
-              </li>
-
-              <!-- box 5 -->
-              <li class="item-f">
-                <div class="box">
-                  <div class="img">
-                    <img src="Source/Img/Product/product1.png" alt="" />
-                  </div>
-                  <div class="detail-box">
-                    <h2>BANDA NEIRA (3D/2N)</h2>
-                    <p>Harga mulai dari:</p>
-                    <span>Rp 2.199.000 </span>
-                    <div class="location">
-                      <div>
-                        <img
-                          src="Source/Img/Icon/location.png"
-                          alt=""
-                          class="icon"
-                        />
-                      </div>
-                      <div><p>Maluku</p></div>
-                    </div>
-                    <a href="detail.html" class="cart">
-                      <img src="Source/Img/Icon/cart.png" alt="" />
-                    </a>
-                  </div>
-                </div>
-              </li>
-
-              <!-- box 6 -->
-              <li class="item-g">
-                <div class="box">
-                  <div class="img">
-                    <img src="Source/Img/Product/product1.png" alt="" />
-                  </div>
-                  <div class="detail-box">
-                    <h2>BANDA NEIRA (3D/2N)</h2>
-                    <p>Harga mulai dari:</p>
-                    <span>Rp 2.199.000 </span>
-                    <div class="location">
-                      <div>
-                        <img
-                          src="Source/Img/Icon/location.png"
-                          alt=""
-                          class="icon"
-                        />
-                      </div>
-                      <div><p>Maluku</p></div>
-                    </div>
-                    <a href="detail.html" class="cart">
-                      <img src="Source/Img/Icon/cart.png" alt="" />
-                    </a>
-                  </div>
-                </div>
-              </li>
-
-              <!-- box 7 -->
-              <li class="item-h">
-                <div class="box">
-                  <div class="img">
-                    <img src="Source/Img/Product/product1.png" alt="" />
-                  </div>
-                  <div class="detail-box">
-                    <h2>BANDA NEIRA (3D/2N)</h2>
-                    <p>Harga mulai dari:</p>
-                    <span>Rp 2.199.000 </span>
-                    <div class="location">
-                      <div>
-                        <img
-                          src="Source/Img/Icon/location.png"
-                          alt=""
-                          class="icon"
-                        />
-                      </div>
-                      <div><p>Maluku</p></div>
-                    </div>
-                    <a href="detail.html" class="cart">
-                      <img src="Source/Img/Icon/cart.png" alt="" />
-                    </a>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </section>
+        <div class="product-container" id="productContainer"></div>
         <!-- Paket Travel End -->
 
         <!-- Partners Start -->
@@ -451,7 +260,7 @@
 
           <!-- Paket Travel content -->
           <!-- Paket Travel content -->
-          <div class="product-container">
+          <div class="product-container2">
             <ul id="autoWidthh" class="cs-hidden">
               <!-- box 1 -->
               <li class="item-a">
@@ -715,5 +524,7 @@
 
     <!-- -------Javascript------- -->
     <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/productbox_explore.js"></script>
+    <script type="text/javascript" src="js/img-grid_explore.js"></script>
   </body>
 </html>
