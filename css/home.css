@@ -100,7 +100,7 @@ header {
 }
 
 .home {
-  background-image: url(/Source/Img/Hero/explore.png);
+  background-image: url(/Source/Img/Hero/home.png);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: top;
@@ -358,6 +358,80 @@ form button:hover {
   margin-right: 7px;
 }
 
+/* ----------------Profile menu---------------- */
+.sub-menu-wrap {
+  position: absolute;
+  top: 100%;
+  right: 2%;
+  width: 300px;
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 0.5s;
+}
+.sub-menu-wrap.open-menu {
+  max-height: 400px;
+}
+
+.sub-menu {
+  background: var(--bg-color);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 20px;
+  margin: 10px;
+  border-radius: 12px;
+}
+.user-info {
+  display: flex;
+  align-items: center;
+}
+.user-info h2 {
+  font-weight: 400;
+  font-size: 20px;
+}
+.user-info img {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  border-radius: 16px;
+  margin-right: 15px;
+}
+.sub-menu hr {
+  border: 0;
+  height: 1px;
+  background: #ccc;
+  width: 100%;
+  margin: 15px 0 10px;
+}
+
+.sub-menu-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--grey-color);
+  margin: 12px 0;
+  width: 100%;
+}
+.sub-menu-link p {
+  width: 100%;
+  font-size: 16px;
+}
+.sub-menu-link img {
+  width: 40px;
+  background-color: var(--grey-color);
+  padding: 8px;
+  margin-right: 15px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.sub-menu-link span {
+  font-size: 20px;
+  transition: transform 0.5s;
+}
+.sub-menu-link:hover span {
+  transform: translateX(5px);
+}
+.sub-menu-link:hover {
+  font-weight: 600;
+}
 /* ----------------Hero---------------- */
 .container {
   position: relative;
@@ -376,7 +450,7 @@ form button:hover {
   color: var(--bg-color);
   margin: 165px;
   padding-top: 32px;
-  text-align: center;
+  margin-bottom: 64px;
 }
 .hero span {
   font-size: 32px;
@@ -403,6 +477,7 @@ form button:hover {
   justify-content: center;
   cursor: pointer;
 }
+
 .btn:hover {
   background: var(--dark-yellow-color);
 }
@@ -426,70 +501,11 @@ form button:hover {
 /* ----------------Content Container---------------- */
 .content-container {
   margin: 0px 165px;
-  padding: 0px;
+  padding: 0px 64px;
   background-color: var(--bg-color);
   border-radius: 65px;
 }
-
-/* ***********Paket Budaya*********** */
-.budaya {
-  margin: 0 65px;
-}
-.img-budaya {
-  position: relative;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.overlay {
-  position: absolute;
-  bottom: 0;
-  color: var(--bg-color);
-  font-size: 40px;
-  font-weight: bolder;
-  width: 100%;
-  padding: 20px;
-  text-align: center;
-  /* transition: 0.5s ease;
-  opacity: 0;
-  background: rgb(0, 0, 0);
-  background: rgba(0, 0, 0, 0.5);  */
-}
-/* Bisa Buat Button Product */
-.img-budaya:hover .overlay {
-  opacity: 1;
-}
-
-.img-budaya img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border: 8px;
-  display: inline-block;
-  vertical-align: middle;
-
-  border-radius: 8px;
-}
-
-.img-grid {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  display: grid;
-  grid-gap: 10px;
-  grid-template-columns: auto auto auto auto;
-  grid-auto-flow: dense;
-}
-.img-grid .img-budaya:first-child {
-  grid-column-start: span 2;
-  grid-row-start: span 2;
-}
-.img-grid .img-budaya:nth-child(2) {
-  grid-column-start: span 2;
-}
-
-/* ***********Content*********** */
+/* ***********Services*********** */
 .heading {
   padding-top: 64px;
   text-align: center;
@@ -519,7 +535,20 @@ form button:hover {
   text-align: center;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-
+.categories-container .box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 346px;
+  width: 274px;
+  border: 0.5rem;
+}
+.categories-container .box img {
+  width: 100%;
+  height: 100px;
+  object-fit: contain;
+}
 .box h2 {
   font-size: 16px;
   font-weight: bolder;
@@ -528,8 +557,7 @@ form button:hover {
   font-size: 14px;
 }
 
-/* ***********Paket*********** */
-
+/* ***********Rekomendasi Paket*********** */
 .travel {
   max-width: 100%;
 }
@@ -604,80 +632,7 @@ form button:hover {
   margin: 16px;
   cursor: pointer;
 }
-
-/* ***********Css nya slider*********** */
-.product-container2 .box img {
-  width: 250px;
-  height: 196px;
-  object-fit: cover;
-  background: #000;
-  position: relative;
-}
-.product-container2 {
-  display: flex;
-  justify-content: center;
-  gap: 32px;
-}
-.product-container2 .box {
-  padding: 16px;
-  text-align: start;
-  position: relative;
-}
-.product-container2 h2 {
-  font: 16px;
-  font: bolder;
-}
-.product-container2 span {
-  font-size: 20px;
-  font-weight: bolder;
-  color: red;
-}
-.product-container2 .box .location {
-  display: flex;
-}
-.product-container2 .box .detail-box .location .icon {
-  padding: 2px;
-  max-width: 16px;
-  max-height: 16px;
-  vertical-align: top;
-  object-fit: contain;
-  margin-right: 4px;
-  background-color: var(--bg-color);
-}
-.product-container2 .box h1 {
-  background-color: var(--yellow-color);
-  width: 67px;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  padding: 12px;
-  border-radius: 4px;
-  margin: 0px;
-  cursor: pointer;
-}
-.product-container2 .box .cart {
-  background-color: var(--yellow-color);
-  width: 45px;
-  height: 45px;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  padding: 12px;
-  border-radius: 4px;
-  margin: 16px;
-  cursor: pointer;
-}
-.product-container2 .box .cart img {
-  background-color: transparent;
-  max-width: 100%;
-  max-height: 100%;
-}
 /* ***********Partner Kami*********** */
-#partners {
-  width: 100%;
-  overflow: hidden;
-}
-
 @keyframes scroll {
   0% {
     transform: translateX(0);
@@ -688,10 +643,10 @@ form button:hover {
 }
 .partners-slider {
   height: 100px;
-  width: 1000px;
-  margin: 0;
+  margin: auto;
   overflow: hidden;
   position: relative;
+  width: auto;
 }
 .partners-slider .slider-track {
   animation: scroll 40s linear infinite;
@@ -905,42 +860,24 @@ footer .bottom-section {
 
   .hero-text {
     margin: 132px 50px;
+    text-align: center;
+  }
+  .hero span {
+    font-size: 32px;
+    font-weight: 600;
   }
   .hero h1 {
     margin-top: 10px;
-    margin-bottom: 20px;
-    font-size: 35px;
-  }
-  .hero p {
-    font-size: 16px;
-  }
-
-  .home {
-    background-size: 100vh 100vh;
-  }
-
-  .hero h1 {
-    margin-bottom: 10px;
-    font-size: 35px;
-    font-weight: bolder;
+    margin-bottom: 65px;
+    font-size: 25px;
+    font-weight: 100;
     line-height: 1.5;
   }
-  .hero-text p {
-    margin-bottom: 150px;
+  .hero p {
+    display: none;
   }
-
-  .budaya {
-    margin: 0;
-  }
-  .img-grid {
-    display: inline-block;
-  }
-  .img-grid .img-budaya {
-    margin-bottom: 20px;
-    height: 300px;
-    width: auto;
-    margin: 30px;
-    object-fit: c;
+  .btn {
+    font-size: 16px;
   }
   .content-container {
     margin: 0;

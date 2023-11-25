@@ -30,15 +30,15 @@
             </ul>
             <!-- Navbar Kanan -->
       <!-- Before login -->
-      <button class="login-btn">Get Started</button>
+      <!-- <button class="login-btn">Get Started</button> -->
       <!-- After Login -->
-      <!-- <div class="profile" onclick="toggleMenu()">
+      <div class="profile" onclick="toggleMenu()">
         <img src="Source/Img/profile.jpg" alt="foto profile" class="pp" />
         <span>Robert Openhamer</span>
         <i class="dropdown">
           <img src="/Source/Img/Icon/dropdown.png" alt="dropdown"/>
         </i>
-      </div> -->
+      </div>
       <!-- Dropdown Menu -->
       <div class="sub-menu-wrap" id="subMenu">
         <div class="sub-menu">
@@ -83,11 +83,11 @@
                 <h2>LOGIN</h2>
                 <form action="#">
                     <div class="input-field">
-                        <input type="text" id="email" required>
+                        <input type="text" required>
                         <label>Email/Username</label>
                     </div>
                     <div class="input-field">
-                        <input type="password" id="password" required>
+                        <input type="password" required>
                         <label>Kata Sandi</label>
                     </div>
                     <a href="#" class="forgot-pass-link">Lupa kata sandi?</a>
@@ -108,19 +108,19 @@
                 <h2>SIGN UP</h2>
                 <form action="#">
                     <div class="input-field">
-                        <input type="text" id="name" required>
+                        <input type="text" required>
                         <label>Buat Username</label>
                     </div>
                     <div class="input-field">
-                        <input type="text" id="email" required>
+                        <input type="text" required>
                         <label>Masukkan email Anda</label>
                     </div>
                     <div class="input-field">
-                        <input type="password" id="password" required>
+                        <input type="password" required>
                         <label>Buat kata sandi</label>
                     </div>
                     <div class="input-field">
-                        <input type="password" id="confirmPassword" required>
+                        <input type="password" required>
                         <label>Tulis ulang kata sandi</label>
                     </div>
                     <div class="policy-text">
@@ -168,7 +168,10 @@
           <div class="heading">
             <h1>Apa yang kami tawarkan?</h1>
             <p>
-              Memahami kebutuhan dengan cepat dan tepat dengan menyediakan berbagai macam paket wisata yang sesuai dengan kebutuhan anda
+              Memahami kebutuhan dengan cepat dan tepat akan memudahkan<br />
+              pengambilan keputusan yang lebih baik guna menghindari
+              ketidakpastian<br />
+              hasil produk
             </p>
           </div>
           <!-- Box categories -->
@@ -178,24 +181,27 @@
               <img src="Source/Img/Icon/categories1.png" alt="" />
               <h2>Transportasi</h2>
               <p
-                >Kemudahan perjalanan dimulai di sini. Dengan memilih paket wisata dari kami anda bisa mendapatkan transportasi dengan aman, nyaman, dan tepat waktu. Sehingga anda dapat menikmati liburan tanpa risau.</p>
+                >Kemudahan perjalanan dimulai di sini. Dengan layanan transportasi kami, Anda akan tiba dengan aman, nyaman, dan tepat waktu di tujuan Anda, sehingga Anda dapat fokus pada petualangan Anda</p
+              >
             </div>
             <!-- Box 2 -->
             <div class="box">
               <img src="Source/Img/Icon/categories2.png" alt="" />
-              <h2>Destinasi</h2>
-              <p>
-                Temukan destinasi wisata yang menarik dan eksotis pada paket wisata dari kamu yang akan memberikan pengalaman yang indah untuk Anda.
-              </p>
+              <h2>Paket Wisata</h2>
+              <p
+                >Temukan paket wisata eksklusif kami yang dirancang khusus untuk memenuhi keinginan dan impian perjalanan Anda</p
+              >
             </div>
             <!-- Box 3 -->
             <div class="box">
               <img src="Source/Img/Icon/categories3.png" alt="" />
               <h2>Akomodasi</h2>
-              <p>
-                Temukan ketenangan dalam kenyamanan dan keindahan akomodasi
-                yang sudah kami siapkan untuk Anda. Dengan memilih paket wisata anda, anda sudah bisa bersantai tanpa memikirkan penginapan.
-                </p>
+              <p
+                >Temukan ketenangan dalam kenyamanan dan keindahan akomodasi
+                yang kami tawarkan. Dari hotel mewah hingga penginapan
+                eksklusif, kami memastikan Anda merasa seperti di rumah saat
+                menjelajahi dunia</p
+              >
             </div>
           </div>
         </section>
@@ -204,16 +210,59 @@
         <!-- Paket Travel Start -->
         <section class="travel" id="travel">
           <div class="heading">
-            <h1>Paket Wisata Nasional</h1>
+            <h1>Rekomendasi Paket Travel</h1>
             <p>
-              Nikmati sensasi liburan terbaik di Indonesia dengan paket liburan nasional kami! setiap paket menyuguhkan pengalaman tak terlupakan dari Sabang sampai Merauke.
+              Kami menawarkan beragam paket perjalanan yang dapat disesuaikan <br>
+              dengan kebutuhan dan anggaran Anda
           </div>
           <!-- Paket Travel content -->
-          <div class="product-container" id="productContainer">
+          <div class="product-container">
+            <!-- product-box 1 -->
+            <div class="product-box">
+              <img src="Source/Img/Product/product1.png" alt="" />
+              <h2>BANDA NEIRA (3D/2N)</h2>
+              <p>Harga mulai dari:</p>
+              <span>Rp 2.199.000 </span>
+              <div class="location">
+                <div><img src="Source/Img/Icon/location.png" alt="" class="icon" /></div>
+             <div><p>Maluku</p></div>
+              </div>
+              <a href="detail.html"  class="cart">
+                <img src="Source/Img/Icon/cart.png" alt="">
+              </a>
+            </div>
+            <!-- product-box 2 -->
+            <div class="product-box">
+              <img src="Source/Img/Product/product2.png" alt="" />
+              <h2>BANDA NEIRA (3D/2N)</h2>
+              <p>Harga mulai dari:</p>
+              <span>Rp 2.199.000 </span>
+              <div class="location">
+                <div><img src="Source/Img/Icon/location.png" alt="" class="icon" /></div>
+             <div><p>Maluku</p></div>
+              </div>
+              <a href="detail.html"  class="cart">
+                <img src="Source/Img/Icon/cart.png" alt="">
+              </a>
+            </div>
+            <!-- product-box 3 -->
+            <div class="product-box">
+              <img src="Source/Img/Product/product3.png" alt="" />
+              <h2>BANDA NEIRA (3D/2N)</h2>
+              <p>Harga mulai dari:</p>
+              <span>Rp 2.199.000 </span>
+              <div class="location">
+                <div><img src="Source/Img/Icon/location.png" alt="" class="icon" /></div>
+             <div><p>Maluku</p></div>
+              </div>
+              <a href="detail.html"  class="cart">
+                <img src="Source/Img/Icon/cart.png" alt="">
+              </a>
+            </div>
           </div>
         </p>
         <div>
-          <a href="explore.html#travel" class="secondary-btn">Lihat Selengkapnya</a>
+          <a href="explore.html" class="secondary-btn">Lihat Selengkapnya</a>
       </div>
         </section>
         <!-- Paket Travel End -->
@@ -224,7 +273,7 @@
             <h1>Partner Kami</h1>
             <p>
               Kami telah berpartner dengan berbagai penyedia layanan travel,
-              mulai dari penerbangan, perkapalan hingga perhotelan
+              mulai <br> dari penerbangan, perkapalan hingga perhotelan
             </p>
           </div>
           <div class="partners-slider">
@@ -275,15 +324,58 @@
        <!-- Paket Travel Start -->
        <section class="travel" id="travel">
         <div class="heading">
-          <h1>Paket Wisata Internasional</h1>
+          <h1>Rekomendasi Paket Travel</h1>
           <p>
-            Rencanakan liburan internasional Anda dengan kami! Pilih kenyamanan, pilih kegembiraan, pilih kami untuk pengalaman liburan yang tak terlupakan!  
+            Kami menawarkan beragam paket perjalanan yang dapat disesuaikan <br>
+            dengan kebutuhan dan anggaran Anda
         </div>
         <!-- Paket Travel content -->
-        <div class="product-container" id="productContainer2">
+        <div class="product-container">
+          <!-- product-box 1 -->
+          <div class="product-box">
+            <img src="Source/Img/Product/product1.png" alt="" />
+            <h2>BANDA NEIRA (3D/2N)</h2>
+            <p>Harga mulai dari:</p>
+            <span>Rp 2.199.000 </span>
+            <div class="location">
+              <div><img src="Source/Img/Icon/location.png" alt="" class="icon" /></div>
+           <div><p>Maluku</p></div>
+            </div>
+            <a href="detail.html"  class="cart">
+              <img src="Source/Img/Icon/cart.png" alt="">
+          </a>
+          </div>
+          <!-- product-box 2 -->
+          <div class="product-box">
+            <img src="Source/Img/Product/product2.png" alt="" />
+            <h2>BANDA NEIRA (3D/2N)</h2>
+            <p>Harga mulai dari:</p>
+            <span>Rp 2.199.000 </span>
+            <div class="location">
+              <div><img src="Source/Img/Icon/location.png" alt="" class="icon" /></div>
+           <div><p>Maluku</p></div>
+            </div>
+            <a href="detail" class="cart" >
+              <img src="Source/Img/Icon/cart.png" alt="">
+             </a>
+          </div>
+          <!-- product-box 3 -->
+          <div class="product-box">
+            <img src="Source/Img/Product/product3.png" alt="" />
+            <h2>BANDA NEIRA (3D/2N)</h2>
+            <p>Harga mulai dari:</p>
+            <span>Rp 2.199.000 </span>
+            <div class="location">
+              <div><img src="Source/Img/Icon/location.png" alt="" class="icon" /></div>
+           <div><p>Maluku</p></div>
+            </div>
+            <a href="detail.html" class="cart">
+              <img src="Source/Img/Icon/cart.png" alt="">
+          </a>
+          </div>
         </div>
       <div>
-        <a href="explore.html#travel2" class="secondary-btn">Lihat Selengkapnya</a>
+        <a href="explore.html" class="secondary-btn">Lihat Selengkapnya</a>
     </div>
       </section>
       <!-- Paket Travel End -->
@@ -295,7 +387,7 @@
   <div class="top-section">
       <div class="item">
           <div class="logo">
-              <a href="home.html"><img src="Source/Img/logowhite.png" alt=""></a>
+              <a href="#"><img src="Source/Img/logowhite.png" alt=""></a>
           </div>
           <div class="social-media">
               <div class="media">
@@ -315,26 +407,27 @@
       <div class="item">
           <h4>Jelajah</h4>
           <ul>
-              <li><a href="explore.html#travelBudaya">Belajar Budaya</a></li>
-              <li><a href="explore.html#travel">Explorasi Indonesia</a></li>
-              <li><a href="explore.html#travel2">Keliling Dunia</a></li>
+              <li><a href="#">Cari Layanan</a></li>
+              <li><a href="#">Layanan Terpopuler</a></li>
+              <li><a href="#">Jenis Layanan</a></li>
+              <li><a href="#">Destinasi</a></li>
           </ul>
       </div>
       <div class="item">
           <h4>Tentang Kami</h4>
           <ul>
-              <li><a href="aboutus.html#travel">Tim Kami</a></li>
-              <li><a href="aboutus.html#visi">Visi Misi</a></li>
-              <li><a href="aboutus.html#partners">Klien Kami</a></li>
+              <li><a href="#">Tim Kami</a></li>
+              <li><a href="#">Visi Misi</a></li>
+              <li><a href="#">Klien Kami</a></li>
           </ul>
       </div>
       <div class="item">
           <h4>FAQ</h4>
           <ul>
-              <li><a href="#">Akun</a></li>
-              <li><a href="#">Booking</a></li>
-              <li><a href="#">Pembayaran</a></li>
-              <li><a href="#">Pertanyaan Lain</a></li>
+              <li><a href="">Akun</a></li>
+              <li><a href="">Booking</a></li>
+              <li><a href="">Pembayaran</a></li>
+              <li><a href="">Pertanyaan Lain</a></li>
           </ul>
       </div>
       <div class="item">
@@ -357,7 +450,5 @@
     
     <!-- -------Javascript------- -->
     <script type="text/javascript" src="js/script.js"></script>
-    <script type="text/javascript" src="js/productbox_home.js"></script>
   </body>
 </html>
-
