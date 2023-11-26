@@ -99,3 +99,29 @@ function generateCodeWithPrefix(prefix, min, max) {
   //   orderComplete.classList.remove("active");
   // });
 });
+
+
+// Detail Page
+const imgs2 = document.querySelectorAll(".img-select a");
+const imgBtns2 = [...imgs2];
+let imgId2 = 1;
+
+imgBtns2.forEach((imgItem) => {
+  imgItem.addEventListener("click", (event) => {
+    event.preventDefault();
+    imgId = imgItem.dataset.id;
+    slideImage();
+  });
+});
+
+function slideImage() {
+  const displayWidth = document.querySelector(
+    ".img-showcase img:first-child"
+  ).clientWidth;
+
+  document.querySelector(".img-showcase").style.transform = `translateX(${
+    -(imgId - 1) * displayWidth
+  }px)`;
+}
+
+window.addEventListener("resize", slideImage);
