@@ -159,7 +159,7 @@
   display: block;
   top: 50%;
   height: 32px;
-  background-image: url("Source/Img/Icon/controls.png");
+  background-image: url(/Source/Img/Icon/controls.png);
   cursor: pointer;
   position: absolute;
   z-index: 2;

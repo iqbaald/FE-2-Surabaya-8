@@ -95,7 +95,7 @@ header {
 }
 
 .home {
-  background-image: url(Source/Img/Hero/home.png);
+  background-image: url(/Source/Img/Hero/home.png);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: top;
@@ -230,14 +230,14 @@ header {
 
 .login .form-details {
   padding: 0 40px;
-  background: url("Source/Img/Popup/login.jpg");
+  background: url(/Source/Img/Popup/login.jpg);
   background-position: center;
   background-size: cover;
 }
 
 .signup .form-details {
   padding: 0 20px;
-  background: url("Source/Img/Popup/sign-in.jpg");
+  background: url(/Source/Img/Popup/sign-in.jpg);
   background-position: center;
   background-size: cover;
 }
@@ -445,6 +445,7 @@ img{
 .img-showcase{
   display: flex;
   width: 100%;
+  height: 360px;
   object-fit: cover;
   transition: all 0.5s ease;
 }
@@ -501,31 +502,31 @@ img{
   color: #f64749;
   font-weight: bolder;
 }
-.product-detail h2{
+.product-desc h2{
   text-transform: capitalize;
   color: var(--text-color);
   padding-bottom: 0.6rem;
 }
-.product-detail p{
-  font-size: 0.9rem;
+.product-desc p{
+  font-size: 1rem;
   padding: 0.3rem;
-  opacity: 0.8;
+  opacity: 1;
 }
-.product-detail ul{
+.product-desc ul{
   margin: 1rem 0;
   font-size: 0.9rem;
 }
-.product-detail ul li{
+.product-desc ul li{
   margin: 0;
   list-style: none;
-  background: url(Source/Img/Icon/checklist.png) left center no-repeat;
+  background: url("/Source/Img/Icon/checklist.png") left center no-repeat;
   background-size: 18px;
   padding-left: 1.7rem;
   margin: 0.4rem 0;
   font-weight: 600;
   opacity: 0.9;
 }
-.product-detail ul li span{
+.product-desc ul li span{
   font-weight: 400;
 }
 .purchase-info{
@@ -893,5 +894,9 @@ footer .bottom-section {
   }
   .form-box .form-content {
     padding: 30px 20px;
+  }
+  footer .top-section .item .btn-download {
+    font-size: 12px;
+    padding: 12px 24px;
   }
 }

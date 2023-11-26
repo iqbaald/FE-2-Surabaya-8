@@ -52,78 +52,71 @@
     <!-- ---Popup Start--- -->
     <div class="blur-bg-overlay"></div>
     <div class="form-popup">
-      <span class="close-btn"
-        ><img
-          src="Source/Img/Icon/closebtn.png"
-          style="height: 20px"
-          alt="Close"
-      /></span>
-      <div class="form-box login">
-        <div class="form-details">
-          <h2>Selamat Datang!</h2>
-          <p>Masuk ke akun Anda untuk melanjutkan petualangan</p>
+        <span class="close-btn"><img src="Source/Img/Icon/closebtn.png" style="height: 20px; width: auto;" alt="Close"></span>
+        <div class="form-box login">
+            <div class="form-details">
+                <h2>Selamat Datang!</h2>
+                <p>Masuk ke akun Anda untuk melanjutkan petualangan</p>
+            </div>
+            <div class="form-content">
+                <h2>LOGIN</h2>
+                <form action="#">
+                    <div class="input-field">
+                        <input type="text" id="login-email" required>
+                        <label>Email/Username</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" id="login-pass" required>
+                        <label>Kata Sandi</label>
+                    </div>
+                    <a href="#" class="forgot-pass-link">Lupa kata sandi?</a>
+                    <button type="submit">Login</button>
+                </form>
+                <div class="bottom-link">
+                    Belum memiliki akun?
+                    <a href="#" id="signup-link">Sign Up</a>
+                </div>
+            </div>
         </div>
-        <div class="form-content">
-          <h2>LOGIN</h2>
-          <form action="#">
-            <div class="input-field">
-              <input type="text" id="email-login" required />
-              <label>Email/Username</label>
+        <div class="form-box signup">
+            <div class="form-details">
+                <h2>Bergabunglah dengan kami!</h2>
+                <p>Siap untuk petualangan? Daftar sekarang dan mulai perjalanan Anda</p>
             </div>
-            <div class="input-field">
-              <input type="password" id="password-login" required />
-              <label>Kata Sandi</label>
+            <div class="form-content">
+                <h2>SIGN UP</h2>
+                <form action="#">
+                    <div class="input-field">
+                        <input type="text" id="sign-name" required>
+                        <label>Buat Username</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="text" id="sign-email" required>
+                        <label>Masukkan email Anda</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" id="sign-pass" required>
+                        <label>Buat kata sandi</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" id="sign-confirmPass" required>
+                        <label>Tulis ulang kata sandi</label>
+                    </div>
+                    <div class="policy-text">
+                        <input type="checkbox" id="policy">
+                        <label for="policy">
+                            Saya setuju dengan
+                            <a href="#" class="option">Syarat & Ketentuan</a>
+                        </label>
+                    </div>
+                    <button type="submit">Sign Up</button>
+                </form>
+                <div class="bottom-link">
+                    Sudah memiliki akun? 
+                    <a href="#" id="login-link">Login</a>
+                </div>
             </div>
-            <a href="#" class="forgot-pass-link">Lupa kata sandi?</a>
-            <button type="submit">Login</button>
-          </form>
-          <div class="bottom-link">
-            Belum memiliki akun?
-            <a href="#" id="signup-link">Sign Up</a>
-          </div>
         </div>
-      </div>
-      <div class="form-box signup">
-        <div class="form-details">
-          <h2>Bergabunglah dengan kami!</h2>
-          <p>
-            Siap untuk petualangan? Daftar sekarang dan mulai perjalanan Anda
-          </p>
-        </div>
-        <div class="form-content">
-          <h2>SIGN UP</h2>
-          <form action="#">
-            <div class="input-field">
-              <input type="text" id="name-signup" required />
-              <label>Buat Username</label>
-            </div>
-            <div class="input-field">
-              <input type="text" id="email-signup" required />
-              <label>Masukkan email Anda</label>
-            </div>
-            <div class="input-field">
-              <input type="password" id="password-signup" required />
-              <label>Buat kata sandi</label>
-            </div>
-            <div class="input-field">
-              <input type="password" id="confirm-password-signup" required />
-              <label>Tulis ulang kata sandi</label>
-            </div>
-            <div class="policy-text">
-              <input type="checkbox" id="policy" />
-              <label for="policy">
-                Saya setuju dengan
-                <a href="#" class="option">Syarat & Ketentuan</a>
-              </label>
-            </div>
-            <button type="submit">Sign Up</button>
-          </form>
-          <div class="bottom-link">
-            Sudah memiliki akun?
-            <a href="#" id="login-link">Login</a>
-          </div>
-        </div>
-      </div>
     </div>
     <!-- ---Popup End--- -->
 

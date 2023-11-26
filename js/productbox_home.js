@@ -1,5 +1,5 @@
 // Buat product box paket nasional
-const endpoint2 = "https://dummyjson.com/products";
+const endpoint2 = "https://dummyjson.com/products/category/laptops";
 
 fetch(endpoint2)
   .then(response => {
@@ -50,6 +50,9 @@ fetch(endpoint2)
         cart.setAttribute("href","detail.html")
         cart.classList.add("cart", "detailProduct");
         cart.setAttribute("data-product-index", product.id);
+        cart.onclick = function() {
+          storeProductIndex(this);
+        };
 
         var cart_icon = document.createElement("img");
         cart_icon.setAttribute("src", "Source/Img/Icon/cart.png");
@@ -133,6 +136,9 @@ fetch(endpoint)
         cart.setAttribute("href","detail.html");
         cart.classList.add("cart", "detailProduct");
         cart.setAttribute("data-product-index", product.id);
+        cart.onclick = function() {
+          storeProductIndex(this);
+        };
 
         var cart_icon = document.createElement("img");
         cart_icon.setAttribute("src", "Source/Img/Icon/cart.png");
@@ -163,3 +169,9 @@ fetch(endpoint)
   .catch(error => {
     console.log("Error", error);
   });
+
+  // menyimpan ke storage product index
+function storeProductIndex(element) {
+  const productIndex = element.getAttribute('data-product-index');
+  localStorage.setItem('selectedProductIndex', productIndex);
+}

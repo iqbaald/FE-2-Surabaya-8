@@ -1,38 +1,101 @@
-document.addEventListener("DOMContentLoaded", function () {
-  // Mendapatkan elemen-elemen di halaman detail.html
-  const showcaseProductImg = document.querySelector(".productImgShowcase");
-  const selectedProductImg = document.querySelector(".productImgSelect");
+  document.addEventListener("DOMContentLoaded", function () {
+
   const productTitle = document.querySelector(".product-title");
-  const productDesc = document.querySelector(".product-desc");
-  const productPrice = document.querySelector(".product-price");
-  const productBenefits = document.querySelector(".product-benefits");
+   productPrice = document.querySelector(".productPrice"),
+   productDesc = document.querySelector(".productDesc"),
+   productBenefits1 = document.querySelector(".productBenefits1"),
+   productBenefits2 = document.querySelector(".productBenefits2"),
+   productBenefits3 = document.querySelector(".productBenefits3"),
+   productBenefits4 = document.querySelector(".productBenefits4"),
+   productBenefits5 = document.querySelector(".productBenefits5"),
+   imgShowcase1 = document.querySelector(".imgShowcase1"),
+   imgShowcase2 = document.querySelector(".imgShowcase2"),
+   imgShowcase3 = document.querySelector(".imgShowcase3"),
+   imgShowcase4 = document.querySelector(".imgShowcase4"),
+   imgSelect1 = document.querySelector(".imgSelect1"),
+   imgSelect2 = document.querySelector(".imgSelect2"),
+   imgSelect3 = document.querySelector(".imgSelect3"),
+   imgSelect4 = document.querySelector(".imgSelect4");
+  
+  // Mendapatkan data-product-index dari localStorage,
+  const  productIndex= localStorage.getItem(
+          "selectedProductIndex"
+        );
+        // Buat img-grid paket budaya
+        const endpoint = "https://dummyjson.com/products";
 
-  // Mendapatkan elemen dengan class detailProduct
-  const detailProduct = document.querySelector(".detailProduct");
+        fetch(endpoint)
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error("Network response was not ok");
+            }
+            return response.json();
+          })
+          .then((data) => {
+            if (data && data.products) {
 
-  // Mendapatkan nilai data-product-index dari elemen detailProduct
-  const productIndex = parseInt(detailProduct.getAttribute('data-product-index'));
+              const product = data.products[productIndex-1];
+              
+              productTitle.textContent = product.title;
+              productDesc.textContent = product.description;
+              productPrice.textContent = "Rp." + product.price;
+              productBenefits1.textContent = product.images[0];
+              productBenefits2.textContent = product.images[1];
+              productBenefits3.textContent = product.images[2];
+              productBenefits4.textContent = product.images[3];
+              productBenefits5.textContent = product.images[0];
+              
+              imgSelect1.src= product.images[0];
+              imgSelect2.src= product.images[1];
+              imgSelect3.src= product.images[2];
+              imgSelect4.src= product.images[3];
+              
+              imgShowcase1.src= product.images[0];
+              imgShowcase2.src= product.images[1];
+              imgShowcase3.src= product.images[2];
+              imgShowcase4.src= product.images[3];
+            }
+          })
+          .catch((error) => {
+            console.log("Error", error);
+          });
+      });
 
-  // Debugging: Check if productIndex is correctly obtained
-  console.log("Product Index:", productIndex);
+      
+document.addEventListener("DOMContentLoaded", function () {
+  const orderComplete = document.querySelector(".order-complete");
+  const overlay2 = document.querySelector(".overlay2");
+  const showBtn = document.querySelector(".show-models");
+  const closeBtn = document.querySelector(".close-btn2");
+  const ocCode = document.getElementById("oc");
 
-  // Jika nilai data-product-index valid, perbarui elemen-elemen di halaman detail.html
-  if (!isNaN(productIndex) && productIndex >= 0) {
-    // Debugging: Check if endpoint is correctly populated
-    console.log("Endpoint:", endpoint);
+  showBtn.addEventListener("click", function () {
+    overlay2.style.opacity = 1;
+    overlay2.style.pointerEvents = "auto";
 
-    // Mendapatkan produk dari array endpoint berdasarkan productIndex
-    const choosenProduct = endpoint[productIndex];
+    
+  setTimeout(function () {
+    const generatedCode = generateCodeWithPrefix("WTTRVL", 100000000, 40000000);
+    
+    ocCode.textContent = generatedCode;
+    orderComplete.classList.add("active");
+  }, 1000);
+});
 
-    // Debugging: Check if choosenProduct is correctly assigned
-    console.log("Chosen Product:", choosenProduct);
+function generateCodeWithPrefix(prefix, min, max) {
+  const randomNumber = Math.floor(Math.random() * (max - min + 1) + min);
+  return prefix + randomNumber;
+}
 
-    // Memperbarui elemen-elemen di halaman detail.html
-    showcaseProductImg.src = choosenProduct.images[0].img;
-    selectedProductImg.src = choosenProduct.images[0].img;
-    productTitle.textContent = choosenProduct.title;
-    productDesc.textContent = choosenProduct.description;
-    productPrice.textContent = choosenProduct.price;
-    productBenefits.textContent = choosenProduct.images[0].description;
-  }
+  // overlay2.addEventListener("click", function () {
+  //   overlay2.style.opacity = 0;
+  //   overlay2.style.pointerEvents = "none";
+  //   orderComplete.classList.remove("active");
+  // });
+
+  // closeBtn.addEventListener("click", function () {
+  //   overlay2.style.opacity = 0;
+  //   overlay2.style.pointerEvents = "none";
+  //   orderComplete.classList.remove("active");
+  // });
 });

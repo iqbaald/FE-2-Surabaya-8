@@ -82,7 +82,7 @@
       <span class="close-btn"
         ><img
           src="Source/Img/Icon/closebtn.png"
-          style="height: 20px"
+          style="height: 20px; width: auto"
           alt="Close"
       /></span>
       <div class="form-box login">
@@ -94,11 +94,11 @@
           <h2>LOGIN</h2>
           <form action="#">
             <div class="input-field">
-              <input type="text" required />
+              <input type="text" id="login-email" required />
               <label>Email/Username</label>
             </div>
             <div class="input-field">
-              <input type="password" required />
+              <input type="password" id="login-pass" required />
               <label>Kata Sandi</label>
             </div>
             <a href="#" class="forgot-pass-link">Lupa kata sandi?</a>
@@ -121,19 +121,19 @@
           <h2>SIGN UP</h2>
           <form action="#">
             <div class="input-field">
-              <input type="text" required />
+              <input type="text" id="sign-name" required />
               <label>Buat Username</label>
             </div>
             <div class="input-field">
-              <input type="text" required />
+              <input type="text" id="sign-email" required />
               <label>Masukkan email Anda</label>
             </div>
             <div class="input-field">
-              <input type="password" required />
+              <input type="password" id="sign-pass" required />
               <label>Buat kata sandi</label>
             </div>
             <div class="input-field">
-              <input type="password" required />
+              <input type="password" id="sign-confirmPass" required />
               <label>Tulis ulang kata sandi</label>
             </div>
             <div class="policy-text">
@@ -163,11 +163,24 @@
         <div class="product-imgs">
           <div class="img-display">
             <div class="img-showcase">
-              <img src="Source/Img/Destinasi/bali.jpg" alt="paket image" />
-              <img src="Source/Img/Destinasi/lombok.jpg" alt="paket image" />
-              <img src="Source/Img/Destinasi/bandung.jpg" alt="paket image" />
               <img
-                src="Source/Img/Destinasi/bandaNeira.jpg"
+                class="imgShowcase1"
+                src="Source/Img/Product/placeholder.png"
+                alt="paket image"
+              />
+              <img
+                class="imgShowcase2"
+                src="Source/Img/Product/placeholder.png"
+                alt="paket image"
+              />
+              <img
+                class="imgShowcase3"
+                src="Source/Img/Product/placeholder.png"
+                alt="paket image"
+              />
+              <img
+                class="imgShowcase4"
+                src="Source/Img/Product/placeholder.png"
                 alt="paket image"
               />
             </div>
@@ -175,23 +188,36 @@
           <div class="img-select">
             <div class="img-item">
               <a href="#" data-id="1">
-                <img src="Source/Img/Destinasi/bali.jpg" alt="paket image" />
+                <img
+                  class="imgSelect1"
+                  src="Source/Img/Product/placeholder.png"
+                  alt="paket image"
+                />
               </a>
             </div>
             <div class="img-item">
               <a href="#" data-id="2">
-                <img src="Source/Img/Destinasi/lombok.jpg" alt="paket image" />
+                <img
+                  class="imgSelect2"
+                  src="Source/Img/Product/placeholder.png"
+                  alt="paket image"
+                />
               </a>
             </div>
             <div class="img-item">
               <a href="#" data-id="3">
-                <img src="Source/Img/Destinasi/bandung.jpg" alt="paket image" />
+                <img
+                  class="imgSelect3"
+                  src="Source/Img/Product/placeholder.png"
+                  alt="paket image"
+                />
               </a>
             </div>
             <div class="img-item">
               <a href="#" data-id="4">
                 <img
-                  src="Source/Img/Destinasi/bandaNeira.jpg"
+                  class="imgSelect4"
+                  src="Source/Img/Product/placeholder.png"
                   alt="paket image"
                 />
               </a>
@@ -200,26 +226,38 @@
         </div>
         <!-- card right -->
         <div class="product-content">
-          <h2 class="product-title">Paket Borobudur</h2>
+          <h2 class="product-title">Sedang Memuat...</h2>
 
           <div class="product-price">
-            <p class="price">Harga Paket Wisata: <span>$249.00</span></p>
+            <p class="price">
+              Harga Paket Wisata: <span class="productPrice">Rp.000.000</span>
+            </p>
           </div>
 
-          <div class="product-detail">
+          <div class="product-desc">
             <h2>Deskripsi:</h2>
-            <p>
-              Nikmati perjalanan yang tak terlupakan ke salah satu keajaiban
-              dunia, Candi Borobudur. Dalam paket wisata ini, Anda akan memiliki
-              kesempatan untuk menjelajahi situs bersejarah yang megah ini.
+            <p class="productDesc">
+              Ketika kamu fokus pada masalah, maka kamu akan mendapatkan lebih
+              banyak masalah. Ketika kamu berfokus pada kemungkinan, maka kamu
+              akan mendapatkan lebih banyak kesempatan.
             </p>
 
             <ul class="product-benefits">
-              <li>Harga per paket (Max untuk 2 orang/paket)</li>
-              <li>4 Malam Akomodasi</li>
-              <li>Transportasi selama tour sesuai program</li>
-              <li>1x Makan Siang untuk 2 orang</li>
-              <li>Tiket Masuk Objek Wisata sesuai program</li>
+              <li class="productBenefits1">
+                Tunggu yaa, content sedang di proses...
+              </li>
+              <li class="productBenefits2">
+                Tunggu yaa, content sedang di proses...
+              </li>
+              <li class="productBenefits3">
+                Tunggu yaa, content sedang di proses...
+              </li>
+              <li class="productBenefits4">
+                Tunggu yaa, content sedang di proses...
+              </li>
+              <li class="productBenefits5">
+                Tunggu yaa, content sedang di proses...
+              </li>
             </ul>
           </div>
 
