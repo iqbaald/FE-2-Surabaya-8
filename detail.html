@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Detail Paket | Walk to Talk Travel</title>
     <link rel="icon" type="image/png" href="Source/Img/titlelogo2.png" />
-    <link rel="stylesheet" type="text/css" href="/css/detail.css" />
+    <link rel="stylesheet" type="text/css" href="css/detail.css" />
     <link rel="stylesheet" type="text/css" href="css/lightslider.css" />
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/lightslider.js"></script>
@@ -19,7 +19,7 @@
         <span class="hamburger-btn"
           ><img src="Source/Img/Icon/menu.png" style="width: 35px"
         /></span>
-        <a href="home.html" class="logo">
+        <a href="index.html" class="logo">
           <img src="Source/Img/Logo.png" alt="logo" />
         </a>
         <!-- Navbar Tengah -->
@@ -30,7 +30,7 @@
               style="height: 20px"
               alt="Close"
           /></span>
-          <li><a href="home.html" class="active">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="explore.html">Explore</a></li>
           <li><a href="aboutus.html">About Us</a></li>
           <li><a href="contact.html">Be Our Partner</a></li>
@@ -156,77 +156,65 @@
 
     <!-- -------Navbar End------- -->
 
-    <div class="detail-wrapper">
-      <div class="detail">
-        <!-- detail left -->
+    <!-- -------Content Container Start------- -->
+    <div class="card-wrapper">
+      <div class="card">
+        <!-- card left -->
         <div class="product-imgs">
           <div class="img-display">
             <div class="img-showcase">
+              <img src="Source/Img/Destinasi/bali.jpg" alt="paket image" />
+              <img src="Source/Img/Destinasi/lombok.jpg" alt="paket image" />
+              <img src="Source/Img/Destinasi/bandung.jpg" alt="paket image" />
               <img
                 src="Source/Img/Destinasi/bandaNeira.jpg"
-                alt="hotel image"
-              />
-              <img
-                src="Source/Img/Destinasi/lombok.jpg"
-                alt="destinasi image"
-              />
-              <img
-                src="Source/Img/Akomodasi/hotel.jpg"
-                alt="transportasi image"
-              />
-              <img
-                src="Source/Img/Destinasi/yogyakarta.jpg"
-                alt="destinasi image"
+                alt="paket image"
               />
             </div>
           </div>
           <div class="img-select">
             <div class="img-item">
               <a href="#" data-id="1">
-                <img
-                  src="Source/Img/Destinasi/bandaNeira.jpg"
-                  alt="hotel image"
-                />
+                <img src="Source/Img/Destinasi/bali.jpg" alt="paket image" />
               </a>
             </div>
             <div class="img-item">
               <a href="#" data-id="2">
-                <img
-                  src="Source/Img/Destinasi/lombok.jpg"
-                  alt="destinasi image"
-                />
+                <img src="Source/Img/Destinasi/lombok.jpg" alt="paket image" />
               </a>
             </div>
             <div class="img-item">
               <a href="#" data-id="3">
-                <img
-                  src="Source/Img/Akomodasi/hotel.jpg"
-                  alt="transportasi image"
-                />
+                <img src="Source/Img/Destinasi/bandung.jpg" alt="paket image" />
               </a>
             </div>
             <div class="img-item">
               <a href="#" data-id="4">
                 <img
-                  src="Source/Img/Destinasi/yogyakarta.jpg"
-                  alt="destinasi image"
+                  src="Source/Img/Destinasi/bandaNeira.jpg"
+                  alt="paket image"
                 />
               </a>
             </div>
           </div>
         </div>
-        <!-- detail right -->
+        <!-- card right -->
         <div class="product-content">
           <h2 class="product-title">Paket Borobudur</h2>
+
+          <div class="product-price">
+            <p class="price">Harga Paket Wisata: <span>$249.00</span></p>
+          </div>
+
           <div class="product-detail">
-            <h2>Explore Keindahan Candi Borobudur</h2>
+            <h2>Deskripsi:</h2>
             <p>
               Nikmati perjalanan yang tak terlupakan ke salah satu keajaiban
               dunia, Candi Borobudur. Dalam paket wisata ini, Anda akan memiliki
               kesempatan untuk menjelajahi situs bersejarah yang megah ini.
             </p>
-            <p><strong>Harga Paket: Rp. 3.000.000</strong></p>
-            <ul>
+
+            <ul class="product-benefits">
               <li>Harga per paket (Max untuk 2 orang/paket)</li>
               <li>4 Malam Akomodasi</li>
               <li>Transportasi selama tour sesuai program</li>
@@ -236,20 +224,38 @@
           </div>
 
           <div class="purchase-info">
-            <!-- <input type="number" min="0" value="1" /> -->
-            <button type="button" class="btn">Beli Sekarang</button>
+            <button type="button" class="show-models btn">
+              Beli Sekarang <i class="fas"></i>
+            </button>
             <button type="button" class="btn">Tanya CS</button>
           </div>
         </div>
       </div>
     </div>
 
+    <section class="order-complete">
+      <span class="overlay2"></span>
+
+      <div class="models-box">
+        <img src="Source/Img/Icon/complete.png" alt="" />
+        <h2>Pesenan Berhasil</h2>
+        <h3>selamat pesanan anda berhasil dipesan</h3>
+        <h3>kode pemesenan anda :</h3>
+        <p id="oc"></p>
+        <div class="buttons">
+          <a class="close-btn2" href="explore.html">Kembali ke Explore</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- -------Content Container End------- -->
+
     <!-- Footer Start -->
     <footer>
       <div class="top-section">
         <div class="item">
           <div class="logo">
-            <a href="home.html"
+            <a href="index.html"
               ><img src="Source/Img/logowhite.png" alt=""
             /></a>
           </div>
@@ -313,5 +319,6 @@
 
     <!-- -------Javascript------- -->
     <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/detailproduct.js"></script>
   </body>
 </html>

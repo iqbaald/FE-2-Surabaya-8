@@ -38,28 +38,6 @@ signupLoginLink.forEach((link) => {
   });
 });
 
-// Light Slider
-$(document).ready(function () {
-  $("#autoWidth").lightSlider({
-    autoWidth: true,
-    loop: true,
-    onSliderLoad: function () {
-      $("#autoWidth").removeClass("cS-hidden");
-    },
-  });
-});
-
-// Light Slider 2
-$(document).ready(function () {
-  $("#autoWidthh").lightSlider({
-    autoWidth: true,
-    loop: true,
-    onSliderLoad: function () {
-      $("#autoWidthh").removeClass("cS-hidden");
-    },
-  });
-});
-
 function newFunction() {
   return "subMenu";
 }
@@ -88,3 +66,41 @@ function slideImage() {
 }
 
 window.addEventListener("resize", slideImage);
+
+document.addEventListener("DOMContentLoaded", function () {
+  const orderComplete = document.querySelector(".order-complete");
+  const overlay2 = document.querySelector(".overlay2");
+  const showBtn = document.querySelector(".show-models");
+  const closeBtn = document.querySelector(".close-btn2");
+  const ocCode = document.getElementById("oc");
+
+  showBtn.addEventListener("click", function () {
+    overlay2.style.opacity = 1;
+    overlay2.style.pointerEvents = "auto";
+
+    
+  setTimeout(function () {
+    const generatedCode = generateCodeWithPrefix("WTTRVL", 100000000, 40000000);
+    
+    ocCode.textContent = generatedCode;
+    orderComplete.classList.add("active");
+  }, 1000);
+});
+
+function generateCodeWithPrefix(prefix, min, max) {
+  const randomNumber = Math.floor(Math.random() * (max - min + 1) + min);
+  return prefix + randomNumber;
+}
+
+  // overlay2.addEventListener("click", function () {
+  //   overlay2.style.opacity = 0;
+  //   overlay2.style.pointerEvents = "none";
+  //   orderComplete.classList.remove("active");
+  // });
+
+  // closeBtn.addEventListener("click", function () {
+  //   overlay2.style.opacity = 0;
+  //   overlay2.style.pointerEvents = "none";
+  //   orderComplete.classList.remove("active");
+  // });
+});

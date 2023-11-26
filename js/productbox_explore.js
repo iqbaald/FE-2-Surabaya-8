@@ -1,5 +1,5 @@
 // Buat img-grid paket budaya
-const endpoint3 = "https://dummyjson.com/products";
+const endpoint3 = "https://dummyjson.com/products?category=smartphone";
 
 fetch(endpoint3)
   .then(response => {
@@ -93,7 +93,8 @@ fetch(endpoint2)
         // buat link untuk button cart
         var cart = document.createElement("a");
         cart.setAttribute("href","detail.html")
-        cart.classList.add("cart");
+        cart.classList.add("cart", "detailProduct");
+        cart.setAttribute("data-product-index", product.id);
 
         var cart_icon = document.createElement("img");
         cart_icon.setAttribute("src", "/Source/Img/Icon/cart.png");
@@ -173,7 +174,8 @@ fetch(endpoint)
         // buat link untuk button cart
         var cart = document.createElement("a");
         cart.setAttribute("href","detail.html")
-        cart.classList.add("cart");
+        cart.classList.add("cart", "detailProduct");
+        cart.setAttribute("data-product-index", product.id);
 
         var cart_icon = document.createElement("img");
         cart_icon.setAttribute("src", "/Source/Img/Icon/cart.png");

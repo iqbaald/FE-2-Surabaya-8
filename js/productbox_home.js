@@ -48,7 +48,8 @@ fetch(endpoint2)
         // buat link untuk button cart
         var cart = document.createElement("a");
         cart.setAttribute("href","detail.html")
-        cart.classList.add("cart");
+        cart.classList.add("cart", "detailProduct");
+        cart.setAttribute("data-product-index", product.id);
 
         var cart_icon = document.createElement("img");
         cart_icon.setAttribute("src", "/Source/Img/Icon/cart.png");
@@ -129,8 +130,9 @@ fetch(endpoint)
 
         // buat link untuk button cart
         var cart = document.createElement("a");
-        cart.setAttribute("href","detail.html")
-        cart.classList.add("cart");
+        cart.setAttribute("href","detail.html");
+        cart.classList.add("cart", "detailProduct");
+        cart.setAttribute("data-product-index", product.id);
 
         var cart_icon = document.createElement("img");
         cart_icon.setAttribute("src", "/Source/Img/Icon/cart.png");
