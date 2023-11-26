@@ -40,7 +40,7 @@ fetch(endpoint2)
         var div_icon = document.createElement("div");
         var icon = document.createElement("img");
         icon.classList.add("icon")
-        icon.setAttribute("src", "/Source/Img/Icon/location.png");
+        icon.setAttribute("src", "Source/Img/Icon/location.png");
 
         var div_alamat = document.createElement("div");
         var alamat = document.createTextNode(product.brand);
@@ -52,7 +52,7 @@ fetch(endpoint2)
         cart.setAttribute("data-product-index", product.id);
 
         var cart_icon = document.createElement("img");
-        cart_icon.setAttribute("src", "/Source/Img/Icon/cart.png");
+        cart_icon.setAttribute("src", "Source/Img/Icon/cart.png");
 
         // append child
         productBox.appendChild(img);
@@ -123,7 +123,7 @@ fetch(endpoint)
         var div_icon = document.createElement("div");
         var icon = document.createElement("img");
         icon.classList.add("icon")
-        icon.setAttribute("src", "/Source/Img/Icon/location.png");
+        icon.setAttribute("src", "Source/Img/Icon/location.png");
 
         var div_alamat = document.createElement("div");
         var alamat = document.createTextNode(product.brand);
@@ -135,7 +135,7 @@ fetch(endpoint)
         cart.setAttribute("data-product-index", product.id);
 
         var cart_icon = document.createElement("img");
-        cart_icon.setAttribute("src", "/Source/Img/Icon/cart.png");
+        cart_icon.setAttribute("src", "Source/Img/Icon/cart.png");
 
         // append child
         productBox.appendChild(img);
