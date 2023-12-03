@@ -80,24 +80,27 @@
                 <p>Masuk ke akun Anda untuk melanjutkan petualangan</p>
             </div>
             <div class="form-content">
-                <h2>LOGIN</h2>
-                <form action="login" method="post">
-                    <div class="input-field">
-                        <input type="text" id="login-username" required>
-                        <label>Username</label>
-                    </div>
-                    <div class="input-field">
-                        <input type="password" id="login-pass" required>
-                        <label>Kata Sandi</label>
-                    </div>
-                    <a href="#" class="forgot-pass-link">Lupa kata sandi?</a>
-                    <button type="submit">Login</button>
-                </form>
-                <div class="bottom-link">
-                    Belum memiliki akun?
-                    <a href="#" id="signup-link">Sign Up</a>
+              <h2>LOGIN</h2>
+              <form action="http://localhost:3000/login" id="login-form" method="post">
+                <div class="input-field">
+                  <input type="text" id="login-username" name="username" required>
+                  <label>Username</label>
                 </div>
+                <div class="input-field">
+                  <input type="password" id="login-pass" name="password" required>
+                  <label>Kata Sandi</label>
+                </div>
+                <div id="error-message" class="error-message"></div>
+                <a href="#" class="forgot-pass-link">Lupa kata sandi?</a>
+                <button type="submit">Login</button>
+              </form>
+              <div class="bottom-link">
+                Belum memiliki akun?
+                <a href="#" id="signup-link">Sign Up</a>
+              </div>
             </div>
+            
+          
         </div>
         <div class="form-box signup">
             <div class="form-details">
@@ -120,7 +123,6 @@
                         <label>Buat kata sandi</label>
                     </div>
           
-                    <div id="error-message" class="error-message"></div>
                     <div class="policy-text">
                         <input type="checkbox" id="policy">
                         <label for="policy">
@@ -357,6 +359,19 @@
     <script type="text/javascript" src="js/script.js"></script>
     <script type="text/javascript" src="js/productbox_home.js"></script>
     <script type="text/javascript" src="js/signin.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+  // Ambil nilai dari parameter query 'message' pada URL
+  const urlParams = new URLSearchParams(window.location.search);
+  const message = urlParams.get('message');
+
+  // Periksa apakah ada pesan dan masukkan ke elemen HTML
+  if (message) {
+    const errorMessageElement = document.getElementById('error-message');
+    errorMessageElement.textContent = message;
+  }
+});
+    </script>
   </body>
 </html>
 

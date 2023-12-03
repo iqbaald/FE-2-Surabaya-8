@@ -21,7 +21,7 @@
   const  productIndex= localStorage.getItem(
           "selectedProductIndex"
         );
-        // Buat img-grid paket budaya
+        // Buat img-grid
         const endpoint = "https://lively-cape-toad.cyclic.app/products";
 
         fetch(endpoint)
@@ -33,9 +33,7 @@
           })
           .then((data) => {
             if (data && data.products) {
-
               const product = data.products[productIndex-1];
-              
               productTitle.textContent = product.title;
               productDesc.textContent = product.description;
               // Fungsi untuk memformat angka harga
