@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA_Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us | Walk to Talk Travel</title>
+    <link rel="icon" type="image/png" href="Source/Img/titlelogo2.png" />
+    <link rel="stylesheet" type="text/css" href="css/contact.css" />
+    <link rel="stylesheet" type="text/css" href="css/lightslider.css" />
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/lightslider.js"></script>
+  </head>
+  <body>
+    <!-- -------Navbar Start------- -->
+    <header>
+      <nav class="navbar">
+            <!-- Navbar Kiri -->
+            <span class="hamburger-btn "><img src="Source/Img/Icon/menu.png" style="width: 35px;" /></span>
+            <a href="index.html" class="logo">
+                <img src="Source/Img/Logo.png" alt="logo">
+            </a>
+            <!-- Navbar Tengah -->
+            <ul class="links">
+                <span class="close-btn navbar"><img src="Source/Img/Icon/closebtn.png" style="height: 20px" alt="Close"></span>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="explore.html">Explore</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="contact.html" class="active">Be Our Partner</a></li>
+            </ul>
+            <!-- Navbar Kanan -->
+      <!-- Before login -->
+      <!-- <button class="login-btn">Get Started</button> -->
+          <!-- After Login -->
+      <div class="profile" onclick="toggleMenu()">
+        <img src="Source/Img/profile.jpg" alt="foto profile" class="pp" />
+        <span>Robert Openhamer</span>
+        <i class="dropdown">
+          <img src="Source/Img/Icon/dropdown.png" alt="dropdown"/>
+        </i>
+      </div>
+      <!-- Dropdown Menu -->
+      <div class="sub-menu-wrap" id="subMenu">
+        <div class="sub-menu">
+          <div class="user-info">
+            <img src="Source/Img/profile.jpg" >
+            <h2>Robert Openhamer</h2>
+          </div>
+
+          <hr>
+
+          <a href="#" class="sub-menu-link">
+            <img src="Source/Img/Icon/user.png" >
+            <p>Akun Saya</p>
+            <span>></span>
+          </a>
+          <a href="#" class="sub-menu-link">
+            <img src="Source/Img/Icon/history.png" >
+            <p>Riwayat Transaksi</p>
+            <span>></span>
+          </a>
+          <a href="#" class="sub-menu-link">
+            <img src="Source/Img/Icon/logout.png" >
+            <p>Logout</p>
+            <span>></span>
+          </a>
+
+        </div>
+      </div>
+        </nav>
+    </header>
+
+    <!-- ---Popup Start--- -->
+    <div class="blur-bg-overlay"></div>
+    <div class="form-popup">
+        <span class="close-btn"><img src="Source/Img/Icon/closebtn.png" style="height: 20px; width: auto;" alt="Close"></span>
+        <div class="form-box login" id="login-dulu">
+            <div class="form-details">
+                <h2>Selamat Datang!</h2>
+                <p>Masuk ke akun Anda untuk melanjutkan petualangan</p>
+            </div>
+            <div class="form-content">
+                <h2>LOGIN</h2>
+                <form action="login" method="post">
+                    <div class="input-field">
+                        <input type="text" id="login-username" required>
+                        <label>Username</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" id="login-pass" required>
+                        <label>Kata Sandi</label>
+                    </div>
+                    <a href="#" class="forgot-pass-link">Lupa kata sandi?</a>
+                    <button type="submit">Login</button>
+                </form>
+                <div class="bottom-link">
+                    Belum memiliki akun?
+                    <a href="#" id="signup-link">Sign Up</a>
+                </div>
+            </div>
+        </div>
+        <div class="form-box signup">
+            <div class="form-details">
+                <h2>Bergabunglah dengan kami!</h2>
+                <p>Siap untuk petualangan? Daftar sekarang dan mulai perjalanan Anda</p>
+            </div>
+            <div class="form-content">
+                <h2>SIGN UP</h2>
+                <form action="signup-form" method="post" id="signup-form">
+                    <div class="input-field">
+                        <input name="sign-username" type="text" id="sign-username" required>
+                        <label>Buat Username</label>
+                    </div>
+                    <div class="input-field">
+                        <input name="sign-email" type="text" id="sign-email" required>
+                        <label>Masukkan email Anda</label>
+                    </div>
+                    <div class="input-field">
+                        <input name="sign-pass" type="password" id="sign-pass" required>
+                        <label>Buat kata sandi</label>
+                    </div>
+          
+                    <div id="error-message" class="error-message"></div>
+                    <div class="policy-text">
+                        <input type="checkbox" id="policy">
+                        <label for="policy">
+                            Saya setuju dengan
+                            <a href="#" class="option">Syarat & Ketentuan</a>
+                        </label>
+                    </div>
+                    <button type="submit">Sign Up</button>
+                </form>
+                <div class="bottom-link">
+                    Sudah memiliki akun? 
+                    <a href="#" id="login-link">Login</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ---Popup End--- -->
+
+    <!-- -------Navbar End------- -->
+
+    <!-- -------Home Start------- -->
+    <section class="home">
+      <!-- Hero Start -->
+      <!-- <section class="hero" id="hero">
+        <div class="container">
+          <div class="hero-text">
+            <h2>
+              Yang ini tetap masih bingung
+            </h2>
+            <h1>Mau Diisi apa....</h1>
+
+          </div>
+        </div>
+      </section> -->
+      <!-- Hero End -->
+      <section class="contact">
+        <div class="content">
+            <h2>Kami akan senang mendapatkan pesan dari Anda</h2>
+            <p>Jika Anda memiliki pertanyaan, masukan, atau butuh bantuan dalam perjalanan Anda, tim kami siap membantu. Jangan ragu untuk menghubungi kami.</p>
+        </div>
+        <div class="container">
+            <div class="contactInfo">
+                <div class="box">
+                    <div class="icon"><img src="Source/Img/Icon/clock.png" style="width: 20px;" alt=""></div>
+                    <div class="text">
+                        <h3>Jam Operasional</h3>
+                        <p>Tim kami selalu siap membantu <br>Senin - Jumat <br>07.00 - 17.00 WIB</p>
+                    </div>   
+                </div>
+                <div class="box">
+                    <div class="icon"><img src="Source/Img/Icon/location.png" style="width: 20px;" alt=""></div>
+                    <div class="text">
+                        <h3>Lokasi Kantor Pusat</h3>
+                        <p>Perusahaan no. 328465, reg. <br>Alamat: Jl. Maju jaya jaya jaya <br>No. 3, Jakarta, Indonesia.</p>
+                    </div>   
+                </div>
+                <div class="box">
+                    <div class="icon"><img src="Source/Img/Icon/mail.png" style="width: 20px;" alt=""></div>
+                    <div class="text">
+                        <h3>Email</h3>
+                        <p>walktotalktravel@info.com</p>
+                    </div>   
+                </div>
+                <div class="box">
+                    <div class="icon"><img src="Source/Img/Icon/call.png" style="width: 20px;" alt=""></div>
+                    <div class="text">
+                        <h3>Telepon</h3>
+                        <p>0888-8888-9999</p>
+                    </div>   
+                </div>
+            </div>
+            <div class="contactForm">
+                <form>
+                    <h2>Kirim Pesan</h2>
+                    <div class="inputBox">
+                        <input type="text" name="" required="required">
+                        <span>Nama</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="text" name="" required="required">
+                        <span>Email</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="text" name="" required="required">
+                        <span>No. Telepon</span>
+                    </div>
+                    <div class="inputBox">
+                        <textarea required="required"></textarea>
+                        <span>Ketik pesan...</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="submit" name="" value="Kirim">
+                    </div>
+                </form>
+            </div>
+        </div>        
+    </section>
+     <!-- Footer Start -->
+     <footer>
+        <div class="top-section">
+            <div class="item">
+                <div class="logo">
+                    <a href="index.html"><img src="Source/Img/logowhite.png" alt=""></a>
+                </div>
+                <div class="social-media">
+                    <div class="media">
+                        <img src="Source/Img/Icon/ig.png" alt="">
+                    </div>
+                    <div class="media">
+                        <img src="Source/Img/Icon/in.png" alt="">
+                    </div>
+                    <div class="media">
+                        <img src="Source/Img/Icon/wa.png" alt="">
+                    </div>
+                    <div class="media">
+                        <img src="Source/Img/Icon/x.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <h4>Jelajah</h4>
+                <ul>
+                    <li><a href="explore.html#travelBudaya">Belajar Budaya</a></li>
+                    <li><a href="explore.html#travel">Explorasi Indonesia</a></li>
+                    <li><a href="explore.html#travel2">Keliling Dunia</a></li>
+                </ul>
+            </div>
+            <div class="item">
+                <h4>Tentang Kami</h4>
+                <ul>
+                    <li><a href="aboutus.html#travel">Tim Kami</a></li>
+                    <li><a href="aboutus.html#visi">Visi Misi</a></li>
+                    <li><a href="aboutus.html#partners">Klien Kami</a></li>
+                </ul>
+            </div>
+            <div class="item">
+                <h4>FAQ</h4>
+                <ul>
+                    <li><a href="#">Akun</a></li>
+                    <li><a href="#">Booking</a></li>
+                    <li><a href="#">Pembayaran</a></li>
+                    <li><a href="#">Pertanyaan Lain</a></li>
+                </ul>
+            </div>
+            <div class="item">
+                <h4>Hubungi Kami</h4>
+                <ul>
+                    <li>walktotalktravel@gmail.com</li>
+                </ul>
+                <h4>Akses Melalui Aplikasi</h4>
+                      <div>
+       <a href="#" class="btn-download">Unduh Sekarang</a>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-section">
+            <p> &#169; 2023 Walk to Talk Travel, All Right Reserved</p>
+        </div>
+          </footer>
+          <!-- Footer End -->
+    <!-- -------Home End------- -->
+    
+    <!-- -------Javascript------- -->
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/signin.js"></script>
+</body>
+</html>

@@ -1,4 +1,57 @@
-// Buat product box paket internationl
+// Buat img-grid paket budaya
+const endpoint3 = "https://lively-cape-toad.cyclic.app/products/category/3";
+
+fetch(endpoint3)
+  .then(response => {
+    if (!response.ok) {
+      throw new Error("Network response was not ok");
+    }
+    return response.json();
+  })
+  .then(data => {
+    if (data && data.products) {
+      // data.products.forEach(product => {
+        for (let i = 0; i < Math.min(data.products.length, 4); i++){
+          const product = data.products[i];
+
+          // buat budaya box
+          var budaya = document.createElement("a");
+          budaya.classList.add("img-budaya");
+          budaya.setAttribute("href", "login-detail.html");
+          budaya.setAttribute("data-product-index", product.id_products);
+          budaya.onclick = function() {
+            storeProductIndex(this);
+          };
+  
+
+          // buat isi image
+          var image = document.createElement("img");
+          image.setAttribute("src", product.thumbnail);
+
+          // buat isi text
+          var text = document.createElement("div");
+          text.classList.add("overlay");  
+          var isiText = document.createTextNode(product.title);;
+
+          // append 
+          budaya.appendChild(image);
+          budaya.appendChild(text);
+
+          text.appendChild(isiText)
+
+        
+        let paketBudaya = document.getElementById("img-grid");
+        paketBudaya.appendChild(budaya);
+      };
+    } else {
+      console.error("Data tidak sesuai", data);
+    }
+  })
+  .catch(error => {
+    console.log("Error", error);
+  });
+
+  // Buat product box paket international
 const endpoint2 = "https://lively-cape-toad.cyclic.app/products/category/2";
 
 fetch(endpoint2)
@@ -10,10 +63,7 @@ fetch(endpoint2)
   })
   .then(data => {
     if (data && data.products) {
-      // data.products.forEach(product => {
-        for (let i = 0; i < Math.min(data.products.length, 6); i++){
-          const product = data.products[i];
-
+      data.products.forEach(product => {
         // buat product-box
         var productBox = document.createElement("div");
         productBox.classList.add("product-box");
@@ -27,16 +77,10 @@ fetch(endpoint2)
         var title = document.createTextNode(product.title);
 
         var p = document.createElement("p");
-        var harga = document.createTextNode("Harga paket trip:");
-
-        // Fungsi untuk memformat angka harga
-        function formatPrice(price) {
-          return new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', minimumFractionDigits: 0, maximumFractionDigits: 0 }).format(price);
-        }
-        var formattedPrice = formatPrice(product.price);
+        var harga = document.createTextNode("Harga Paket Trip");
 
         var span = document.createElement("span");
-        var price = document.createTextNode(formattedPrice);
+        var price = document.createTextNode("Rp. " + product.price);
 
         // buat lokasi icon dan alamat
         var location = document.createElement("div");
@@ -53,12 +97,13 @@ fetch(endpoint2)
 
         // buat link untuk button cart
         var cart = document.createElement("a");
-        cart.setAttribute("href","detail.html")
+        cart.setAttribute("href","login-detail.html")
         cart.classList.add("cart", "detailProduct");
         cart.setAttribute("data-product-index", product.id_products);
         cart.onclick = function() {
           storeProductIndex(this);
         };
+
 
         var cart_icon = document.createElement("img");
         cart_icon.setAttribute("src", "Source/Img/Icon/cart.png");
@@ -81,7 +126,7 @@ fetch(endpoint2)
 
         let productContainer = document.getElementById("productContainer2");
         productContainer.appendChild(productBox);
-      };
+      });
     } else {
       console.error("Data tidak sesuai", data);
     }
@@ -90,7 +135,8 @@ fetch(endpoint2)
     console.log("Error", error);
   });
 
-  // buat produk box Paket nasional
+
+// Buat product box paket nasional
 const endpoint = "https://lively-cape-toad.cyclic.app/products/category/1";
 
 fetch(endpoint)
@@ -102,10 +148,7 @@ fetch(endpoint)
   })
   .then(data => {
     if (data && data.products) {
-      // data.products.forEach(product => {
-        for (let i = 0; i < Math.min(data.products.length, 6); i++){
-          const product = data.products[i];
-
+      data.products.forEach(product => {
         // buat product-box
         var productBox = document.createElement("div");
         productBox.classList.add("product-box");
@@ -120,6 +163,7 @@ fetch(endpoint)
 
         var p = document.createElement("p");
         var harga = document.createTextNode("Harga Paket Wisata:");
+
         // Fungsi untuk memformat angka harga
         function formatPrice(price) {
           return new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', minimumFractionDigits: 0, maximumFractionDigits: 0 }).format(price);
@@ -144,12 +188,13 @@ fetch(endpoint)
 
         // buat link untuk button cart
         var cart = document.createElement("a");
-        cart.setAttribute("href","detail.html");
-        cart.classList.add("cart", "detailProduct");        
+        cart.setAttribute("href","login-detail.html")
+        cart.classList.add("cart", "detailProduct");
         cart.setAttribute("data-product-index", product.id_products);
         cart.onclick = function() {
           storeProductIndex(this);
         };
+
 
         var cart_icon = document.createElement("img");
         cart_icon.setAttribute("src", "Source/Img/Icon/cart.png");
@@ -172,7 +217,7 @@ fetch(endpoint)
 
         let productContainer = document.getElementById("productContainer");
         productContainer.appendChild(productBox);
-      };
+      });
     } else {
       console.error("Data tidak sesuai", data);
     }

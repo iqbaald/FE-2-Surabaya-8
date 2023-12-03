@@ -22,7 +22,7 @@
           "selectedProductIndex"
         );
         // Buat img-grid paket budaya
-        const endpoint = "https://dummyjson.com/products";
+        const endpoint = "https://lively-cape-toad.cyclic.app/products";
 
         fetch(endpoint)
           .then(response => {
@@ -61,7 +61,7 @@
           });
       });
 
-      
+// order complete popup    
 document.addEventListener("DOMContentLoaded", function () {
   const orderComplete = document.querySelector(".order-complete");
   const overlay2 = document.querySelector(".overlay2");
@@ -101,7 +101,7 @@ function generateCodeWithPrefix(prefix, min, max) {
 });
 
 
-// Detail Page
+// Detail Page image slider
 const imgs2 = document.querySelectorAll(".img-select a");
 const imgBtns2 = [...imgs2];
 let imgId2 = 1;

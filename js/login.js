@@ -4,28 +4,25 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById('signup-form').addEventListener('submit', function (event) {
       event.preventDefault();
   
-      const username = document.getElementById('sign-username').value;
-      const email = document.getElementById('sign-email').value;
-      const password = document.getElementById('sign-pass').value;
+      const username = document.getElementById('login-username').value;
+      const password = document.getElementById('login-pass').value;
       localStorage.setItem('loggedInUsername', username);
       
       const data = {
         username: username,
-        email: email,
         password: password
       };
   
       const requestOptions = {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json',
+          'Content-Type': 'application/json'
         },
         body: JSON.stringify(data)
       };
   
       // fetch ke endpoint signup
-      fetch('https://lively-cape-toad.cyclic.app/customers', requestOptions)
+      fetch('https://reqres.in/api/users', requestOptions)
         .then((response) => {
           if (!response.ok) {
             throw new Error('Network response was not ok');

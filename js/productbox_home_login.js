@@ -1,5 +1,6 @@
-// Buat product box paket internationl
+// Buat product box paket internasional
 const endpoint2 = "https://lively-cape-toad.cyclic.app/products/category/2";
+
 
 fetch(endpoint2)
   .then(response => {
@@ -27,10 +28,10 @@ fetch(endpoint2)
         var title = document.createTextNode(product.title);
 
         var p = document.createElement("p");
-        var harga = document.createTextNode("Harga paket trip:");
+        var harga = document.createTextNode("Harga Paket Wisata:");
 
-        // Fungsi untuk memformat angka harga
-        function formatPrice(price) {
+         // Fungsi untuk memformat angka harga
+         function formatPrice(price) {
           return new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', minimumFractionDigits: 0, maximumFractionDigits: 0 }).format(price);
         }
         var formattedPrice = formatPrice(product.price);
@@ -53,7 +54,7 @@ fetch(endpoint2)
 
         // buat link untuk button cart
         var cart = document.createElement("a");
-        cart.setAttribute("href","detail.html")
+        cart.setAttribute("href","login-detail.html")
         cart.classList.add("cart", "detailProduct");
         cart.setAttribute("data-product-index", product.id_products);
         cart.onclick = function() {
@@ -119,7 +120,8 @@ fetch(endpoint)
         var title = document.createTextNode(product.title);
 
         var p = document.createElement("p");
-        var harga = document.createTextNode("Harga Paket Wisata:");
+        var harga = document.createTextNode("Harga paket trip:");
+
         // Fungsi untuk memformat angka harga
         function formatPrice(price) {
           return new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', minimumFractionDigits: 0, maximumFractionDigits: 0 }).format(price);
@@ -144,8 +146,8 @@ fetch(endpoint)
 
         // buat link untuk button cart
         var cart = document.createElement("a");
-        cart.setAttribute("href","detail.html");
-        cart.classList.add("cart", "detailProduct");        
+        cart.setAttribute("href","login-detail.html");
+        cart.classList.add("cart", "detailProduct");
         cart.setAttribute("data-product-index", product.id_products);
         cart.onclick = function() {
           storeProductIndex(this);

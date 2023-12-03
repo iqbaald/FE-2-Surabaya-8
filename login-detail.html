@@ -19,7 +19,7 @@
         <span class="hamburger-btn"
           ><img src="Source/Img/Icon/menu.png" style="width: 35px"
         /></span>
-        <a href="index.html" class="logo">
+        <a href="login-index.html" class="logo">
           <img src="Source/Img/Logo.png" alt="logo" />
         </a>
         <!-- Navbar Tengah -->
@@ -30,32 +30,25 @@
               style="height: 20px"
               alt="Close"
           /></span>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="explore.html">Explore</a></li>
-          <li><a href="aboutus.html">About Us</a></li>
-          <li><a href="contact.html">Be Our Partner</a></li>
+          <li><a href="login-index.html">Home</a></li>
+          <li><a href="login-explore.html">Explore</a></li>
+          <li><a href="login-aboutus.html">About Us</a></li>
+          <li><a href="login-contact.html">Be Our Partner</a></li>
         </ul>
         <!-- Navbar Kanan -->
         <!-- Before login -->
-        <button class="login-btn">Get Started</button>
+        <!-- <button class="login-btn">Get Started</button> -->
         <!-- After Login -->
-        <!-- <div class="profile" onclick="toggleMenu()">
-        <img src="Source/Img/profile.jpg" alt="foto profile" class="pp" />
-        <span>Robert Openhamer</span>
-        <i class="dropdown">
-          <img src="Source/Img/Icon/dropdown.png" alt="dropdown"/>
-        </i>
-      </div> -->
+        <div class="profile" onclick="toggleMenu()">
+          <img src="Source/Img/profile.png" alt="foto profile" class="pp" />
+          <span id="username" class="username">Robert Openhamer</span>
+          <i class="dropdown">
+            <img src="Source/Img/Icon/dropdown.png" alt="dropdown" />
+          </i>
+        </div>
         <!-- Dropdown Menu -->
         <div class="sub-menu-wrap" id="subMenu">
           <div class="sub-menu">
-            <div class="user-info">
-              <img src="Source/Img/profile.jpg" />
-              <h2>Robert Openhamer</h2>
-            </div>
-
-            <hr />
-
             <a href="#" class="sub-menu-link">
               <img src="Source/Img/Icon/user.png" />
               <p>Akun Saya</p>
@@ -66,7 +59,7 @@
               <p>Riwayat Transaksi</p>
               <span>></span>
             </a>
-            <a href="#" class="sub-menu-link">
+            <a href="index.html" class="sub-menu-link">
               <img src="Source/Img/Icon/logout.png" />
               <p>Logout</p>
               <span>></span>
@@ -265,7 +258,7 @@
           </div>
 
           <div class="purchase-info">
-            <button type="button" class="btn login-btn2">
+            <button type="button" class="show-models btn">
               Beli Sekarang <i class="fas"></i>
             </button>
             <button type="button" class="btn">Tanya CS</button>
@@ -284,7 +277,7 @@
         <h3>kode pemesenan anda :</h3>
         <p id="oc"></p>
         <div class="buttons">
-          <a class="close-btn2" href="explore.html">Kembali ke Explore</a>
+          <a class="close-btn2" href="login-explore.html">Kembali ke Explore</a>
         </div>
       </div>
     </section>
@@ -296,7 +289,7 @@
       <div class="top-section">
         <div class="item">
           <div class="logo">
-            <a href="index.html"
+            <a href="login-index.html"
               ><img src="Source/Img/logowhite.png" alt=""
             /></a>
           </div>
@@ -318,17 +311,19 @@
         <div class="item">
           <h4>Jelajah</h4>
           <ul>
-            <li><a href="explore.html#travelBudaya">Belajar Budaya</a></li>
-            <li><a href="explore.html#travel">Explorasi Indonesia</a></li>
-            <li><a href="explore.html#travel2">Keliling Dunia</a></li>
+            <li>
+              <a href="login-explore.html#travelBudaya">Belajar Budaya</a>
+            </li>
+            <li><a href="login-explore.html#travel">Explorasi Indonesia</a></li>
+            <li><a href="login-explore.html#travel2">Keliling Dunia</a></li>
           </ul>
         </div>
         <div class="item">
           <h4>Tentang Kami</h4>
           <ul>
-            <li><a href="aboutus.html#travel">Tim Kami</a></li>
-            <li><a href="aboutus.html#visi">Visi Misi</a></li>
-            <li><a href="aboutus.html#partners">Klien Kami</a></li>
+            <li><a href="login-aboutus.html#travel">Tim Kami</a></li>
+            <li><a href="login-aboutus.html#visi">Visi Misi</a></li>
+            <li><a href="login-aboutus.html#partners">Klien Kami</a></li>
           </ul>
         </div>
         <div class="item">
