@@ -38,22 +38,27 @@
               
               productTitle.textContent = product.title;
               productDesc.textContent = product.description;
-              productPrice.textContent = "Rp." + product.price;
-              productBenefits1.textContent = product.images[0];
-              productBenefits2.textContent = product.images[1];
-              productBenefits3.textContent = product.images[2];
-              productBenefits4.textContent = product.images[3];
-              productBenefits5.textContent = product.images[0];
+              // Fungsi untuk memformat angka harga
+              function formatPrice(price) {
+                return new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', minimumFractionDigits: 0, maximumFractionDigits: 0 }).format(price);
+              }
+              var formattedPrice = formatPrice(product.price);
+
+              productPrice.textContent = formattedPrice;
+              productBenefits1.textContent = product.benefits[0];
+              productBenefits2.textContent = product.benefits[1];
+              productBenefits3.textContent = product.benefits[2];
+              productBenefits4.textContent = product.benefits[3];
               
-              imgSelect1.src= product.images[0];
-              imgSelect2.src= product.images[1];
-              imgSelect3.src= product.images[2];
-              imgSelect4.src= product.images[3];
+              imgSelect1.src= product.thumbnail;
+              imgSelect2.src= product.images[0];
+              imgSelect3.src= product.images[1];
+              imgSelect4.src= product.images[2];
               
-              imgShowcase1.src= product.images[0];
-              imgShowcase2.src= product.images[1];
-              imgShowcase3.src= product.images[2];
-              imgShowcase4.src= product.images[3];
+              imgShowcase1.src= product.thumbnail;
+              imgShowcase2.src= product.images[0];
+              imgShowcase3.src= product.images[1];
+              imgShowcase4.src= product.images[2];
             }
           })
           .catch((error) => {
@@ -125,3 +130,23 @@ function slideImage() {
 }
 
 window.addEventListener("resize", slideImage);
+
+
+
+const formPopup2= document.querySelector(".form-popup2");
+const signupLoginLink2 = formPopup.querySelectorAll(".bottom-link2 a");
+
+showPopupBtn2.addEventListener("click", () => {
+  document.body.classList.toggle("show-popup");
+});
+
+hidePopupBtn2.addEventListener("click", () => showPopupBtn2.click());
+
+signupLoginLink2.forEach((link) => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+    formPopup2.classList[link.id === "signup-link" ? "add" : "remove"](
+      "show-signup"
+    );
+  });
+});

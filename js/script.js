@@ -5,6 +5,7 @@ const showPopupBtn = document.querySelector(".login-btn");
 const showPopupBtn2 = document.querySelector(".login-btn2");
 const formPopup = document.querySelector(".form-popup");
 const hidePopupBtn = formPopup.querySelector(".close-btn");
+const hidePopupBtn2 = formPopup.querySelector(".close-btn2");
 const signupLoginLink = formPopup.querySelectorAll(".bottom-link a");
 
 // profile menu
@@ -25,9 +26,8 @@ hideMenuBtn.addEventListener("click", () => hamburgerBtn.click());
 showPopupBtn.addEventListener("click", () => {
   document.body.classList.toggle("show-popup");
 });
-showPopupBtn2.addEventListener("click", () => {
-  document.body.classList.toggle("show-popup");
-});
+
+
 
 // Hide login popup
 hidePopupBtn.addEventListener("click", () => showPopupBtn.click());
