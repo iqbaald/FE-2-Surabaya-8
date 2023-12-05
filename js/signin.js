@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
       };
   
       // fetch ke endpoint signup
-      fetch('http://localhost:3000/register', requestOptions)
+      fetch('https://lively-cape-toad.cyclic.app/register', requestOptions)
         .then((response) => {
           if (!response.ok) {
             throw new Error('Network response was not ok');
