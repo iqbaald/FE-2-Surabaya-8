@@ -601,6 +601,11 @@ form button:hover {
   color: var(--dark-yellow-color);
 }
 /* ***********Partner Kami*********** */
+#partners {
+  width: 100%;
+  overflow: hidden;
+}
+
 @keyframes scroll {
   0% {
     transform: translateX(0);

@@ -81,7 +81,7 @@
             </div>
             <div class="form-content">
               <h2>LOGIN</h2>
-              <form action="http://localhost:3000/login" id="login-form" method="post">
+              <form action="#" id="login-form" method="post">
                 <div class="input-field">
                   <input type="text" id="login-username" name="username" required>
                   <label>Username</label>
@@ -156,7 +156,7 @@
               ketenangan, maka bergabunglah dengan kami dalam perjalanan yang
               kami siapkan spesial untuk anda.
             </p>
-            <a href="login-explore.html" class="btn">Jelajahi Sekarang</a>
+            <a href="explore.html" class="btn">Jelajahi Sekarang</a>
           </div>
         </div>
       </section>
@@ -359,19 +359,7 @@
     <script type="text/javascript" src="js/script.js"></script>
     <script type="text/javascript" src="js/productbox_home.js"></script>
     <script type="text/javascript" src="js/signin.js"></script>
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-  // Ambil nilai dari parameter query 'message' pada URL
-  const urlParams = new URLSearchParams(window.location.search);
-  const message = urlParams.get('message');
-
-  // Periksa apakah ada pesan dan masukkan ke elemen HTML
-  if (message) {
-    const errorMessageElement = document.getElementById('error-message');
-    errorMessageElement.textContent = message;
-  }
-});
-    </script>
+    <script type="text/javascript" src="js/login.js"></script>
   </body>
 </html>
 

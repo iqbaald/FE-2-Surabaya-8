@@ -1,3 +1,35 @@
+      document.addEventListener('DOMContentLoaded', function() {
+  // Ambil nilai dari parameter query 'message' pada URL
+  const urlParams = new URLSearchParams(window.location.search);
+  const message = urlParams.get('message');
+
+  // Periksa apakah ada pesan dan masukkan ke elemen HTML
+  if (message) {
+    const errorMessageElement = document.getElementById('error-message');
+    errorMessageElement.textContent = message;
+  }
+});
+
+const loginUser = async (credentials) => {
+  try {
+    const response = await fetch('http://localhost:3000/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(credentials),
+    });
+
+    const result = await response.json();
+    console.log(result);
+
+    return result; // Mengembalikan respons dari server
+  } catch (error) {
+    console.error('Error during login:', error);
+    throw error;
+  }
+};
+
 document.getElementById('login-form').addEventListener('submit', async function (event) {
   event.preventDefault();
 
@@ -13,19 +45,13 @@ document.getElementById('login-form').addEventListener('submit', async function 
     const response = await loginUser(credentials);
 
     // Memeriksa apakah login berhasil berdasarkan respons dari server
-    if (response.success) {
+    if (response.message === 'Login successful.') {
       console.log('Login successful');
       localStorage.setItem('loginMessage', 'Login successful');
-      localStorage.setItem('loggedInUsername', username);
-
-      // Debugging: Cek URL sebelum perubahan
-      console.log('Current URL:', window.location.href);
-
+      localStorage.setItem('loggedInUsername', response.username);
+  
       // Mengarahkan pengguna ke halaman login-explore.html
       window.location.href = 'login-explore.html';
-
-      // Debugging: Cek URL setelah perubahan
-      console.log('New URL:', window.location.href);
     } else {
       console.log('Login failed');
       localStorage.setItem('loginMessage', 'Login failed');
