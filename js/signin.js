@@ -49,8 +49,10 @@ document.addEventListener("DOMContentLoaded", function () {
   function setLoggedInUsername(username) {
     var usernameElement = document.getElementById("username");
     var usernameElement2 = document.getElementById("username2");
+    var usernameElement3 = document.getElementById("username3");
     usernameElement.innerHTML = username;
     usernameElement2.innerHTML = username;
+    usernameElement3.innerHTML = username;
     usernameElement.classList.remove("old-username-class");
     usernameElement.classList.add("new-username-class");
   }

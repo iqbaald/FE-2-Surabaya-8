@@ -858,6 +858,9 @@ footer .bottom-section {
 
 /* ----------------Responsive---------------- */
 @media (max-width: 950px) {
+  #username {
+    display: none;
+  }
   .navbar :is(.hamburger-btn, .close-btn) {
     display: block;
   }

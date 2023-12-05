@@ -453,10 +453,6 @@ form button:hover {
   padding-top: 32px;
   text-align: center;
 }
-.hero span {
-  font-size: 32px;
-  font-weight: 600;
-}
 .hero h1 {
   margin: 16px 0;
   font-size: 56px;
@@ -921,6 +917,9 @@ footer .bottom-section {
 
 /* ----------------Responsive---------------- */
 @media (max-width: 950px) {
+  #username {
+    display: none;
+  }
   .navbar :is(.hamburger-btn, .close-btn) {
     display: block;
   }
@@ -981,7 +980,7 @@ footer .bottom-section {
   .hero-text {
     margin: 132px 50px;
   }
-  .hero h1 {
+  .hero h1{
     margin-top: 10px;
     margin-bottom: 20px;
     font-size: 35px;
