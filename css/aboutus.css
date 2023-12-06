@@ -31,7 +31,7 @@ body {
 /* ----------------Navbar---------------- */
 .navbar {
   display: flex;
-  padding: 16px 0;
+  padding: 8px 0;
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
@@ -55,7 +55,7 @@ header {
 }
 
 .navbar .logo img {
-  width: 200px;
+  width: 150px;
 }
 
 .navbar .links {
@@ -83,8 +83,8 @@ header {
 }
 
 .navbar .login-btn {
-  font-size: 24px;
-  padding: 16px 32px;
+  font-size: 16px;
+  padding: 10px 18px;
   color: var(--text-color);
   background: var(--yellow-color);
   font-weight: bolder;
@@ -470,15 +470,17 @@ form button:hover {
 .visi .heading h1 {
   margin-bottom: 32px;
 }
-.visi h2 {
+.visi p {
   background-image: url(/Source/Img/Icon/petik.png);
   background-repeat: no-repeat;
   background-position: right;
   background-size: 70px;
 }
-.company .heading p {
+.company .heading p ,.visi .heading p{
   font-size: 16px;
   padding: 0;
+  font-weight: 400;
+  padding-bottom: 40px;
 }
 
 .btn {
@@ -598,7 +600,10 @@ form button:hover {
   font-size: 16px;
   font-weight: lighter;
   text-transform: uppercase;
-  color: var(--dark-yellow-color);
+  color: var(--bg-color);
+  background-color: var(--text-color);
+  padding: 4px 12px;
+  /* border-radius: 24px; */
 }
 /* ***********Partner Kami*********** */
 #partners {
@@ -782,8 +787,9 @@ footer .bottom-section {
   }
 
   .navbar {
-    padding: 15px 0;
+    padding: 6px 0;
   }
+
 
   .navbar .logo img {
     width: 150px;

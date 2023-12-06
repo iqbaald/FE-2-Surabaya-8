@@ -31,7 +31,7 @@ body {
 /* ----------------Navbar---------------- */
 .navbar {
   display: flex;
-  padding: 16px 0;
+  padding: 8px 0;
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
@@ -55,7 +55,7 @@ header {
 }
 
 .navbar .logo img {
-  width: 200px;
+  width: 150px;
 }
 
 .navbar .links {
@@ -83,8 +83,8 @@ header {
 }
 
 .navbar .login-btn {
-  font-size: 24px;
-  padding: 16px 32px;
+  font-size: 16px;
+  padding: 10px 18px;
   color: var(--text-color);
   background: var(--yellow-color);
   font-weight: bolder;
@@ -722,8 +722,9 @@ footer .bottom-section {
   }
 
   .navbar {
-    padding: 15px 0;
+    padding: 6px 0;
   }
+
 
   .navbar .logo img {
     width: 150px;
