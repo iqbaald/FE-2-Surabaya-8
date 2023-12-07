@@ -4,12 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA_Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Detail Paket | Walk to Talk Travel</title>
+    <title>Riwayat Transaksi | Walk to Talk Travel</title>
     <link rel="icon" type="image/png" href="Source/Img/titlelogo2.png" />
-    <link rel="stylesheet" type="text/css" href="css/detail.css" />
-    <link rel="stylesheet" type="text/css" href="css/lightslider.css" />
-    <script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript" src="js/lightslider.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/list-transaction.css" />
   </head>
   <body>
     <!-- -------Navbar Start------- -->
@@ -41,7 +38,7 @@
         <!-- After Login -->
         <div class="profile" onclick="toggleMenu()">
           <img src="Source/Img/profile.png" alt="foto profile" class="pp" />
-          <span id="username" class="username">Robert Openhamer</span>
+          <span id="username"></span>
           <i class="dropdown">
             <img src="Source/Img/Icon/dropdown.png" alt="dropdown" />
           </i>
@@ -157,139 +154,49 @@
     </div>
     <!-- ---Popup End--- -->
 
-    <!-- -------Navbar End------- -->
-
-    <!-- -------Content Container Start------- -->
-    <div class="card-wrapper">
-      <div class="card">
-        <!-- card left -->
-        <div class="product-imgs">
-          <div class="img-display">
-            <div class="img-showcase">
-              <img
-                class="imgShowcase1"
-                src="Source/Img/Product/placeholder.png"
-                alt="paket image"
-              />
-              <img
-                class="imgShowcase2"
-                src="Source/Img/Product/placeholder.png"
-                alt="paket image"
-              />
-              <img
-                class="imgShowcase3"
-                src="Source/Img/Product/placeholder.png"
-                alt="paket image"
-              />
-              <img
-                class="imgShowcase4"
-                src="Source/Img/Product/placeholder.png"
-                alt="paket image"
-              />
-            </div>
-          </div>
-          <div class="img-select">
-            <div class="img-item">
-              <a href="#" data-id="1">
-                <img
-                  class="imgSelect1"
-                  src="Source/Img/Product/placeholder.png"
-                  alt="paket image"
-                />
-              </a>
-            </div>
-            <div class="img-item">
-              <a href="#" data-id="2">
-                <img
-                  class="imgSelect2"
-                  src="Source/Img/Product/placeholder.png"
-                  alt="paket image"
-                />
-              </a>
-            </div>
-            <div class="img-item">
-              <a href="#" data-id="3">
-                <img
-                  class="imgSelect3"
-                  src="Source/Img/Product/placeholder.png"
-                  alt="paket image"
-                />
-              </a>
-            </div>
-            <div class="img-item">
-              <a href="#" data-id="4">
-                <img
-                  class="imgSelect4"
-                  src="Source/Img/Product/placeholder.png"
-                  alt="paket image"
-                />
-              </a>
-            </div>
-          </div>
-        </div>
-        <!-- card right -->
-        <div class="product-content">
-          <h2 class="product-title">Sedang Memuat...</h2>
-
-          <div class="product-price">
-            <p class="price">
-              Harga Paket Wisata: <span class="productPrice">Rp.000.000</span>
-            </p>
-          </div>
-
-          <div class="product-desc">
-            <h2>Deskripsi:</h2>
-            <p class="productDesc">
-              Ketika kamu fokus pada masalah, maka kamu akan mendapatkan lebih
-              banyak masalah. Ketika kamu berfokus pada kemungkinan, maka kamu
-              akan mendapatkan lebih banyak kesempatan.
-            </p>
-
-            <ul class="product-benefits">
-              <li class="productBenefits1">
-                Tunggu yaa, content sedang di proses...
-              </li>
-              <li class="productBenefits2">
-                Tunggu yaa, content sedang di proses...
-              </li>
-              <li class="productBenefits3">
-                Tunggu yaa, content sedang di proses...
-              </li>
-              <li class="productBenefits4">
-                Tunggu yaa, content sedang di proses...
-              </li>
-              <li class="productBenefits5">
-                Tunggu yaa, content sedang di proses...
-              </li>
-            </ul>
-          </div>
-
-          <div class="purchase-info">
-            <button type="button" class="show-models btn">
-              Beli Sekarang <i class="fas"></i>
-            </button>
-            <button type="button" class="btn">Tanya CS</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <section class="order-complete">
-      <span class="overlay2"></span>
-
-      <div class="models-box">
-        <img src="Source/Img/Icon/complete.png" alt="" />
-        <h2>Pesanan Berhasil</h2>
-        <h3>selamat pesanan anda berhasil dipesan</h3>
-        <h3>kode pemesenan anda :</h3>
-        <p id="oc"></p>
-        <div class="buttons">
-          <a class="close-btn2" href="login-explore.html">Kembali ke Explore</a>
-        </div>
-      </div>
+    <!-- Content -->
+    <section class="content-container">
+      <table>
+        <caption>
+          Riwayat Transaksi
+        </caption>
+        <thead>
+          <tr>
+            <th scope="col">Nomor Transaksi</th>
+            <th scope="col">Nama Paket Trip</th>
+            <th scope="col">Tanggal Transaksi</th>
+            <th scope="col">Harga</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="Nomor Transaksi">4323412</td>
+            <td data-label="Nama Paket Trip">Yogyakarta (2D 4N)</td>
+            <td data-label="Tanggal Transaksi">03/31/2016</td>
+            <td data-label="Harga">Rp.1.900.000</td>
+          </tr>
+          <tr>
+            <td scope="row" data-label="Nomor Transaksi">4326076</td>
+            <td data-label="Nama Paket Trip">Badung (3D 3N)</td>
+            <td data-label="Tanggal Transaksi">2/29/2016</td>
+            <td data-label="Harga">Rp.4.430.000</td>
+          </tr>
+          <tr>
+            <td scope="row" data-label="Nomor Transaksi">4323432</td>
+            <td data-label="Nama Paket Trip">Papua (30D 400N)</td>
+            <td data-label="Tanggal Transaksi">02/01/2016 - 02/29/2016</td>
+            <td data-label="Harga">Rp.1.810.000</td>
+          </tr>
+          <tr>
+            <td scope="row" data-label="Nomor Transaksi">4323412</td>
+            <td data-label="Nama Paket Trip">Australia (5D 4N)</td>
+            <td data-label="Tanggal Transaksi">01/31/2016</td>
+            <td data-label="Harga">Rp.30.000.000</td>
+          </tr>
+        </tbody>
+      </table>
     </section>
-
-    <!-- -------Content Container End------- -->
+    <!-- Content End -->
 
     <!-- Footer Start -->
     <footer>
@@ -362,7 +269,8 @@
 
     <!-- -------Javascript------- -->
     <script type="text/javascript" src="js/script.js"></script>
-    <script type="text/javascript" src="js/detailproduct.js"></script>
+    <script type="text/javascript" src="js/productbox_home.js"></script>
     <script type="text/javascript" src="js/signin.js"></script>
+    <script type="text/javascript" src="js/login.js"></script>
   </body>
 </html>

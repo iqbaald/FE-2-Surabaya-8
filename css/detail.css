@@ -901,7 +901,7 @@ footer .bottom-section {
     color: #000;
   }
   .navbar .links a:hover {
-    color: #00bcd4;
+    color: var(--dark-yellow-color);
   }
   .navbar .login-btn {
     font-size: 0.9rem;

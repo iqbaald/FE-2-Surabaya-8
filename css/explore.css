@@ -966,7 +966,7 @@ footer .bottom-section {
   }
 
   .navbar .links a:hover {
-    color: #00bcd4;
+    color: var(--dark-yellow-color);
   }
 
   .navbar .login-btn {

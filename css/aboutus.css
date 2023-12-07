@@ -466,12 +466,8 @@ form button:hover {
 .heading {
   margin: 32px;
 }
-.company .heading h1,
-.visi .heading h1 {
-  margin-bottom: 32px;
-}
 .visi p {
-  background-image: url(/Source/Img/Icon/petik.png);
+  background-image: url(https://kampus-merdeka-software-engineering.github.io/FE-2-Surabaya-8/Source/Img/Icon/petik.png);
   background-repeat: no-repeat;
   background-position: right;
   background-size: 70px;
@@ -480,7 +476,6 @@ form button:hover {
   font-size: 16px;
   padding: 0;
   font-weight: 400;
-  padding-bottom: 40px;
 }
 
 .btn {
@@ -598,12 +593,9 @@ form button:hover {
 }
 .product-container span {
   font-size: 16px;
-  font-weight: lighter;
+  font-weight: bold;
   text-transform: uppercase;
-  color: var(--bg-color);
-  background-color: var(--text-color);
-  padding: 4px 12px;
-  /* border-radius: 24px; */
+  color: var(--text-color);
 }
 /* ***********Partner Kami*********** */
 #partners {
@@ -828,7 +820,7 @@ footer .bottom-section {
   }
 
   .navbar .links a:hover {
-    color: #00bcd4;
+    color: var(--dark-yellow-color);
   }
 
   .navbar .login-btn {
