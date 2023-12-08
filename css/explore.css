@@ -603,56 +603,61 @@ form button:hover {
 
 .travel {
   max-width: 100%;
+  margin: 0 60px;
 }
-.product-box h2 {
+#travel2{
+  max-width: 100%;
+  margin: 0;
+}
+.product-box h2, .product-box2 h2 {
   font-size: 16px;
   font-weight: bolder;
   padding: 4px 0;
 }
-.product-box p {
+.product-box p, .product-box2 p {
   font-size: 16px;
   font-weight: 500;
   padding: 4px 0;
 }
-.product-container {
+.product-container,.product-container2 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, auto));
   gap: 20px;
   margin-top: 32px;
 }
-.product-container .product-box > img:first-child {
+.product-container .product-box > img:first-child, .product-container2 .product-box > img:first-child {
   width: 100%;
   /* height: 196px; */
   object-fit: cover;
   height: 200px;
 }
 
-.product-container .product-box {
+.product-container .product-box, .product-container2 .product-box  {
   padding: 16px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 16px;
   position: relative;
 }
-.product-container h2 {
+.product-container h2, .product-container2 h2{
   font: 16px;
   font: bolder;
 }
-.product-container span {
+.product-container span, .product-container2 span{
   font-size: 20px;
   font-weight: bolder;
   color: red;
 }
-.product-container .product-box .location {
+.product-container .product-box .location,.product-container2 .product-box .location {
   display: flex;
 }
-.product-container .product-box .location .icon {
+.product-container .product-box .location .icon, .product-container2 .product-box .location .icon {
   padding: 2px;
   max-width: 16px;
   vertical-align: middle;
   object-fit: fill;
   margin-right: 4px;
 }
-.product-container .product-box h1 {
+.product-container .product-box h1, .product-container2 .product-box h1 {
   background-color: var(--yellow-color);
   width: 67px;
   position: absolute;
@@ -663,7 +668,7 @@ form button:hover {
   margin: 0px;
   cursor: pointer;
 }
-.product-container .product-box .cart {
+.product-container .product-box .cart,.product-container2 .product-box .cart {
   background-color: var(--yellow-color);
   width: 45px;
   height: 45px;

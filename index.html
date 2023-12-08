@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA_Compatible" content="IE=edge">
+    <meta http-equiv="X-UA_Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home | Walk to Talk Travel</title>
     <link rel="icon" type="image/png" href="Source/Img/titlelogo2.png" />
@@ -15,32 +15,39 @@
     <!-- -------Navbar Start------- -->
     <header>
       <nav class="navbar">
-            <!-- Navbar Kiri -->
-            <span class="hamburger-btn "><img src="Source/Img/Icon/menu.png" style="width: 35px;" /></span>
-            <a href="index.html" class="logo">
-                <img src="Source/Img/Logo.png" alt="logo">
-            </a>
-            <!-- Navbar Tengah -->
-            <ul class="links">
-                <span class="close-btn navbar"><img src="Source/Img/Icon/closebtn.png" style="height: 20px" alt="Close"></span>
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="explore.html">Explore</a></li>
-                <li><a href="aboutus.html">About Us</a></li>
-                <li><a href="contact.html">Be Our Partner</a></li>
-            </ul>
-            <!-- Navbar Kanan -->
-      <!-- Before login -->
-      <button class="login-btn">Get Started</button>
-      <!-- After Login -->
-      <!-- <div class="profile" onclick="toggleMenu()">
+        <!-- Navbar Kiri -->
+        <span class="hamburger-btn"
+          ><img src="Source/Img/Icon/menu.png" style="width: 35px"
+        /></span>
+        <a href="index.html" class="logo">
+          <img src="Source/Img/Logo.png" alt="logo" />
+        </a>
+        <!-- Navbar Tengah -->
+        <ul class="links">
+          <span class="close-btn navbar"
+            ><img
+              src="Source/Img/Icon/closebtn.png"
+              style="height: 20px"
+              alt="Close"
+          /></span>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="explore.html">Explore</a></li>
+          <li><a href="aboutus.html">About Us</a></li>
+          <li><a href="contact.html">Be Our Partner</a></li>
+        </ul>
+        <!-- Navbar Kanan -->
+        <!-- Before login -->
+        <button class="login-btn">Get Started</button>
+        <!-- After Login -->
+        <!-- <div class="profile" onclick="toggleMenu()">
         <img src="Source/Img/profile.jpg" alt="foto profile" class="pp" />
         <span>Robert Openhamer</span>
         <i class="dropdown">
           <img src="Source/Img/Icon/dropdown.png" alt="dropdown"/>
         </i>
       </div> -->
-      <!-- Dropdown Menu -->
-      <!-- <div class="sub-menu-wrap" id="subMenu">
+        <!-- Dropdown Menu -->
+        <!-- <div class="sub-menu-wrap" id="subMenu">
         <div class="sub-menu">
           <div class="user-info">
             <img src="Source/Img/profile.jpg" >
@@ -67,77 +74,87 @@
 
         </div>
       </div> -->
-        </nav>
+      </nav>
     </header>
 
     <!-- ---Popup Start--- -->
     <div class="blur-bg-overlay"></div>
     <div class="form-popup">
-        <span class="close-btn"><img src="Source/Img/Icon/closebtn.png" style="height: 20px; width: auto;" alt="Close"></span>
-        <div class="form-box login" id="login-dulu">
-            <div class="form-details">
-                <h2>Selamat Datang!</h2>
-                <p>Masuk ke akun Anda untuk melanjutkan petualangan</p>
-            </div>
-            <div class="form-content">
-              <h2>LOGIN</h2>
-              <form action="#" id="login-form" method="post">
-                <div class="input-field">
-                  <input type="text" id="login-username" name="username" required>
-                  <label>Username</label>
-                </div>
-                <div class="input-field">
-                  <input type="password" id="login-pass" name="password" required>
-                  <label>Kata Sandi</label>
-                </div>
-                <div id="error-message" class="error-message"></div>
-                <a href="#" class="forgot-pass-link">Lupa kata sandi?</a>
-                <button type="submit">Login</button>
-              </form>
-              <div class="bottom-link">
-                Belum memiliki akun?
-                <a href="#" id="signup-link">Sign Up</a>
-              </div>
-            </div>
-            
-          
+      <span class="close-btn"
+        ><img
+          src="Source/Img/Icon/closebtn.png"
+          style="height: 20px; width: auto"
+          alt="Close"
+      /></span>
+      <div class="form-box login" id="login-dulu">
+        <div class="form-details">
+          <h2>Selamat Datang!</h2>
+          <p>Masuk ke akun Anda untuk melanjutkan petualangan</p>
         </div>
-        <div class="form-box signup">
-            <div class="form-details">
-                <h2>Bergabunglah dengan kami!</h2>
-                <p>Siap untuk petualangan? Daftar sekarang dan mulai perjalanan Anda</p>
+        <div class="form-content">
+          <h2>LOGIN</h2>
+          <form action="#" id="login-form" method="post">
+            <div class="input-field">
+              <input type="text" id="login-username" name="username" required />
+              <label>Username</label>
             </div>
-            <div class="form-content">
-                <h2>SIGN UP</h2>
-                <form action="signup-form" method="post" id="signup-form">
-                    <div class="input-field">
-                        <input name="sign-username" type="text" id="sign-username" required>
-                        <label>Buat Username</label>
-                    </div>
-                    <div class="input-field">
-                        <input name="sign-email" type="text" id="sign-email" required>
-                        <label>Masukkan email Anda</label>
-                    </div>
-                    <div class="input-field">
-                        <input name="sign-pass" type="password" id="sign-pass" required>
-                        <label>Buat kata sandi</label>
-                    </div>
-          
-                    <div class="policy-text">
-                        <input type="checkbox" id="policy">
-                        <label for="policy">
-                            Saya setuju dengan
-                            <a href="#" class="option">Syarat & Ketentuan</a>
-                        </label>
-                    </div>
-                    <button type="submit">Sign Up</button>
-                </form>
-                <div class="bottom-link">
-                    Sudah memiliki akun? 
-                    <a href="#" id="login-link">Login</a>
-                </div>
+            <div class="input-field">
+              <input type="password" id="login-pass" name="password" required />
+              <label>Kata Sandi</label>
             </div>
+            <div id="error-message" class="error-message"></div>
+            <a href="#" class="forgot-pass-link">Lupa kata sandi?</a>
+            <button type="submit">Login</button>
+          </form>
+          <div class="bottom-link">
+            Belum memiliki akun?
+            <a href="#" id="signup-link">Sign Up</a>
+          </div>
         </div>
+      </div>
+      <div class="form-box signup">
+        <div class="form-details">
+          <h2>Bergabunglah dengan kami!</h2>
+          <p>
+            Siap untuk petualangan? Daftar sekarang dan mulai perjalanan Anda
+          </p>
+        </div>
+        <div class="form-content">
+          <h2>SIGN UP</h2>
+          <form action="signup-form" method="post" id="signup-form">
+            <div class="input-field">
+              <input
+                name="sign-username"
+                type="text"
+                id="sign-username"
+                required
+              />
+              <label>Buat Username</label>
+            </div>
+            <div class="input-field">
+              <input name="sign-email" type="text" id="sign-email" required />
+              <label>Masukkan email Anda</label>
+            </div>
+            <div class="input-field">
+              <input name="sign-pass" type="password" id="sign-pass" required />
+              <label>Buat kata sandi</label>
+            </div>
+
+            <div class="policy-text">
+              <input type="checkbox" id="policy" />
+              <label for="policy">
+                Saya setuju dengan
+                <a href="#" class="option">Syarat & Ketentuan</a>
+              </label>
+            </div>
+            <button type="submit">Sign Up</button>
+          </form>
+          <div class="bottom-link">
+            Sudah memiliki akun?
+            <a href="#" id="login-link">Login</a>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- ---Popup End--- -->
 
@@ -168,7 +185,8 @@
           <div class="heading">
             <h1>Apa yang kami tawarkan?</h1>
             <p>
-              Memahami kebutuhan dengan cepat dan tepat dengan menyediakan berbagai macam paket wisata yang sesuai dengan kebutuhan anda
+              Memahami kebutuhan dengan cepat dan tepat dengan menyediakan
+              berbagai macam paket wisata yang sesuai dengan kebutuhan anda
             </p>
           </div>
           <!-- Box categories -->
@@ -177,15 +195,21 @@
             <div class="box">
               <img src="Source/Img/Icon/categories1.png" alt="" />
               <h2>Transportasi</h2>
-              <p
-                >Kemudahan perjalanan dimulai di sini. Dengan memilih paket wisata dari kami anda bisa mendapatkan transportasi dengan aman, nyaman, dan tepat waktu. Sehingga anda dapat menikmati liburan tanpa risau.</p>
+              <p>
+                Kemudahan perjalanan dimulai di sini. Dengan memilih paket
+                wisata dari kami anda bisa mendapatkan transportasi dengan aman,
+                nyaman, dan tepat waktu. Sehingga anda dapat menikmati liburan
+                tanpa risau.
+              </p>
             </div>
             <!-- Box 2 -->
             <div class="box">
               <img src="Source/Img/Icon/categories2.png" alt="" />
               <h2>Destinasi</h2>
               <p>
-                Temukan destinasi wisata yang menarik dan eksotis pada paket wisata dari kamu yang akan memberikan pengalaman yang indah untuk Anda.
+                Temukan destinasi wisata yang menarik dan eksotis pada paket
+                wisata dari kamu yang akan memberikan pengalaman yang indah
+                untuk Anda.
               </p>
             </div>
             <!-- Box 3 -->
@@ -193,9 +217,10 @@
               <img src="Source/Img/Icon/categories3.png" alt="" />
               <h2>Akomodasi</h2>
               <p>
-                Temukan ketenangan dalam kenyamanan dan keindahan akomodasi
-                yang sudah kami siapkan untuk Anda. Dengan memilih paket wisata anda, anda sudah bisa bersantai tanpa memikirkan penginapan.
-                </p>
+                Temukan ketenangan dalam kenyamanan dan keindahan akomodasi yang
+                sudah kami siapkan untuk Anda. Dengan memilih paket wisata anda,
+                anda sudah bisa bersantai tanpa memikirkan penginapan.
+              </p>
             </div>
           </div>
         </section>
@@ -206,15 +231,19 @@
           <div class="heading">
             <h1>Paket Wisata Nasional</h1>
             <p>
-              Nikmati sensasi liburan terbaik di Indonesia dengan paket liburan nasional kami! setiap paket menyuguhkan pengalaman tak terlupakan dari Sabang sampai Merauke.
+              Nikmati sensasi liburan terbaik di Indonesia dengan paket liburan
+              nasional kami! setiap paket menyuguhkan pengalaman tak terlupakan
+              dari Sabang sampai Merauke.
+            </p>
           </div>
           <!-- Paket Travel content -->
-          <div class="product-container" id="productContainer">
+          <div class="product-container" id="productContainer"></div>
+
+          <div>
+            <a href="explore.html#travel" class="secondary-btn"
+              >Lihat Selengkapnya</a
+            >
           </div>
-        </p>
-        <div>
-          <a href="explore.html#travel" class="secondary-btn">Lihat Selengkapnya</a>
-      </div>
         </section>
         <!-- Paket Travel End -->
 
@@ -265,96 +294,101 @@
               <div class="slide">
                 <img src="Source/Img/Partners/partners5.png" alt="" />
               </div>
-
-            
             </div>
           </div>
         </section>
         <!-- Partners End -->
-        
-       <!-- Paket Travel Start -->
-       <section class="travel" id="travel">
-        <div class="heading">
-          <h1>Paket Wisata Internasional</h1>
-          <p>
-            Rencanakan liburan internasional Anda dengan kami! Pilih kenyamanan, pilih kegembiraan, pilih kami untuk pengalaman liburan yang tak terlupakan!  
-        </div>
-        <!-- Paket Travel content -->
-        <div class="product-container" id="productContainer2">
-        </div>
-      <div>
-        <a href="explore.html#travel2" class="secondary-btn">Lihat Selengkapnya</a>
-    </div>
-      </section>
-      <!-- Paket Travel End -->
 
+        <!-- Paket Travel Start -->
+        <section class="travel" id="travel">
+          <div class="heading">
+            <h1>Paket Wisata Internasional</h1>
+            <p>
+              Rencanakan liburan internasional Anda dengan kami! Pilih
+              kenyamanan, pilih kegembiraan, pilih kami untuk pengalaman liburan
+              yang tak terlupakan!
+            </p>
+          </div>
+          <!-- Paket Travel content -->
+          <div class="product-container2" id="productContainer2"></div>
+          <div>
+            <a href="explore.html#travel2" class="secondary-btn"
+              >Lihat Selengkapnya</a
+            >
+          </div>
+        </section>
+        <!-- Paket Travel End -->
+      </section>
     </section>
-  </section>
     <!-- Footer Start -->
     <footer>
-  <div class="top-section">
-      <div class="item">
+      <div class="top-section">
+        <div class="item">
           <div class="logo">
-              <a href="login-index.html"><img src="Source/Img/logowhite.png" alt=""></a>
+            <a href="login-index.html"
+              ><img src="Source/Img/logowhite.png" alt=""
+            /></a>
           </div>
           <div class="social-media">
-              <div class="media">
-                  <img src="Source/Img/Icon/ig.png" alt="">
-              </div>
-              <div class="media">
-                  <img src="Source/Img/Icon/in.png" alt="">
-              </div>
-              <div class="media">
-                  <img src="Source/Img/Icon/wa.png" alt="">
-              </div>
-              <div class="media">
-                  <img src="Source/Img/Icon/x.png" alt="">
-              </div>
+            <div class="media">
+              <img src="Source/Img/Icon/ig.png" alt="" />
+            </div>
+            <div class="media">
+              <img src="Source/Img/Icon/in.png" alt="" />
+            </div>
+            <div class="media">
+              <img src="Source/Img/Icon/wa.png" alt="" />
+            </div>
+            <div class="media">
+              <img src="Source/Img/Icon/x.png" alt="" />
+            </div>
           </div>
-      </div>
-      <div class="item">
+        </div>
+        <div class="item">
           <h4>Jelajah</h4>
           <ul>
-              <li><a href="login-explore.html#travelBudaya">Belajar Budaya</a></li>
-              <li><a href="login-explore.html#travel">Explorasi Indonesia</a></li>
-              <li><a href="login-explore.html#travel2">Keliling Dunia</a></li>
+            <li>
+              <a href="login-explore.html#travelBudaya">Belajar Budaya</a>
+            </li>
+            <li><a href="login-explore.html#travel">Explorasi Indonesia</a></li>
+            <li><a href="login-explore.html#travel2">Keliling Dunia</a></li>
           </ul>
-      </div>
-      <div class="item">
+        </div>
+        <div class="item">
           <h4>Tentang Kami</h4>
           <ul>
-              <li><a href="login-aboutus.html#travel">Tim Kami</a></li>
-              <li><a href="login-aboutus.html#visi">Visi Misi</a></li>
-              <li><a href="login-aboutus.html#partners">Klien Kami</a></li>
+            <li><a href="login-aboutus.html#travel">Tim Kami</a></li>
+            <li><a href="login-aboutus.html#visi">Visi Misi</a></li>
+            <li><a href="login-aboutus.html#partners">Klien Kami</a></li>
           </ul>
-      </div>
-      <div class="item">
+        </div>
+        <div class="item">
           <h4>FAQ</h4>
           <ul>
-              <li><a href="#">Akun</a></li>
-              <li><a href="#">Booking</a></li>
-              <li><a href="#">Pembayaran</a></li>
-              <li><a href="#">Pertanyaan Lain</a></li>
+            <li><a href="#">Akun</a></li>
+            <li><a href="#">Booking</a></li>
+            <li><a href="#">Pembayaran</a></li>
+            <li><a href="#">Pertanyaan Lain</a></li>
           </ul>
-      </div>
-      <div class="item">
+        </div>
+        <div class="item">
           <h4>Hubungi Kami</h4>
           <ul>
-              <li>walktotalktravel@gmail.com</li>
+            <li>walktotalktravel@gmail.com</li>
           </ul>
           <h4>Akses Melalui Aplikasi</h4>
-                <div>
- <a href="#" class="btn-download">Unduh Sekarang</a>
+          <div>
+            <a href="#" class="btn-download">Unduh Sekarang</a>
           </div>
+        </div>
       </div>
-  </div>
-  <div class="bottom-section">
-      <p> &#169; 2023 Walk to Talk Travel, All Right Reserved</p>
-  </div>
+      <div class="bottom-section">
+        <p>&#169; 2023 Walk to Talk Travel, All Right Reserved</p>
+      </div>
     </footer>
     <!-- Footer End -->
     <!-- -------Home End------- -->
-    
+
     <!-- -------Javascript------- -->
     <script type="text/javascript" src="js/script.js"></script>
     <script type="text/javascript" src="js/productbox_home.js"></script>
@@ -362,4 +396,3 @@
     <script type="text/javascript" src="js/login.js"></script>
   </body>
 </html>
-
