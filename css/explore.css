@@ -1053,6 +1053,9 @@ footer .bottom-section {
   .form-popup {
     width: 95%;
   }
+  .travel {
+    margin: 0;
+  }
 
   .form-box .form-details {
     display: none;
@@ -1065,4 +1068,5 @@ footer .bottom-section {
     font-size: 12px;
     padding: 12px 24px;
   }
+
 }

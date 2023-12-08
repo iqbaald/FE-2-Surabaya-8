@@ -918,6 +918,12 @@ footer .bottom-section {
 }
 
 @media (max-width: 760px) {
+  .travel {
+    margin: 0;
+  }
+  #productContainer2 {
+    padding:  24px;
+  }
   .form-popup {
     width: 95%;
   }

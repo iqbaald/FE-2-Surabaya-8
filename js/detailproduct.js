@@ -7,7 +7,6 @@
    productBenefits2 = document.querySelector(".productBenefits2"),
    productBenefits3 = document.querySelector(".productBenefits3"),
    productBenefits4 = document.querySelector(".productBenefits4"),
-   productBenefits5 = document.querySelector(".productBenefits5"),
    imgShowcase1 = document.querySelector(".imgShowcase1"),
    imgShowcase2 = document.querySelector(".imgShowcase2"),
    imgShowcase3 = document.querySelector(".imgShowcase3"),
