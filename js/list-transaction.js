@@ -1,8 +1,8 @@
 // Mendapatkan referensi ke elemen tabel di HTML
-const contentContainer = document.getElementById('content-container');
+const tbody = document.querySelector('.tbody');
 
 // Mengambil data dari endpoint
-fetch('https://lively-cape-toad.cyclic.app/transaction')
+fetch('https://lively-cape-toad.cyclic.app/transactions')
   .then(response => {
     if (!response.ok) {
       throw new Error('Network response was not ok');
@@ -36,7 +36,7 @@ fetch('https://lively-cape-toad.cyclic.app/transaction')
       row.appendChild(totalPriceCell);
 
       // Menambahkan baris ke tabel
-      contentContainer.appendChild(row);
+      tbody.appendChild(row);
     }
   })
   .catch(error => {
