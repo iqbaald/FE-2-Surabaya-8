@@ -79,9 +79,15 @@ fetch(endpoint2)
         var p = document.createElement("p");
         var harga = document.createTextNode("Harga Paket Trip");
 
-        var span = document.createElement("span");
-        var price = document.createTextNode("Rp. " + product.price);
+        // Fungsi untuk memformat angka harga
+        function formatPrice(price) {
+          return new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', minimumFractionDigits: 0, maximumFractionDigits: 0 }).format(price);
+        }
+        var formattedPrice = formatPrice(product.price);
 
+        var span = document.createElement("span");
+        var price = document.createTextNode(formattedPrice)
+        
         // buat lokasi icon dan alamat
         var location = document.createElement("div");
         location.classList.add("location");

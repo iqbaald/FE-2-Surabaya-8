@@ -466,11 +466,17 @@ form button:hover {
 .heading {
   margin: 32px;
 }
+.visi {
+  margin: -56px;
+}
 .visi p {
   background-image: url(https://kampus-merdeka-software-engineering.github.io/FE-2-Surabaya-8/Source/Img/Icon/petik.png);
   background-repeat: no-repeat;
   background-position: right;
   background-size: 70px;
+}
+.company .heading h1, .visi .heading h1{
+  margin-bottom: 24px;
 }
 .company .heading p ,.visi .heading p{
   font-size: 16px;
