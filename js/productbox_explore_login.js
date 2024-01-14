@@ -1,5 +1,5 @@
 // Buat img-grid paket budaya
-const endpoint3 = "https://dummyjson.com/products/category/smartphones";
+const endpoint3 = "https://lively-cape-toad.cyclic.app/products/category/3";
 
 fetch(endpoint3)
   .then(response => {
@@ -17,8 +17,8 @@ fetch(endpoint3)
           // buat budaya box
           var budaya = document.createElement("a");
           budaya.classList.add("img-budaya");
-          budaya.setAttribute("href", "detail.html");
-          budaya.setAttribute("data-product-index", product.id);
+          budaya.setAttribute("href", "login-detail.html");
+          budaya.setAttribute("data-product-index", product.id_products);
           budaya.onclick = function() {
             storeProductIndex(this);
           };
@@ -52,7 +52,7 @@ fetch(endpoint3)
   });
 
   // Buat product box paket international
-const endpoint2 = "https://dummyjson.com/products/";
+const endpoint2 = "https://lively-cape-toad.cyclic.app/products/category/2";
 
 fetch(endpoint2)
   .then(response => {
@@ -77,7 +77,7 @@ fetch(endpoint2)
         var title = document.createTextNode(product.title);
 
         var p = document.createElement("p");
-        var harga = document.createTextNode("Harga paket trip:");
+        var harga = document.createTextNode("Harga Paket Trip");
 
         // Fungsi untuk memformat angka harga
         function formatPrice(price) {
@@ -86,8 +86,8 @@ fetch(endpoint2)
         var formattedPrice = formatPrice(product.price);
 
         var span = document.createElement("span");
-        var price = document.createTextNode(formattedPrice);
-
+        var price = document.createTextNode(formattedPrice)
+        
         // buat lokasi icon dan alamat
         var location = document.createElement("div");
         location.classList.add("location");
@@ -103,9 +103,9 @@ fetch(endpoint2)
 
         // buat link untuk button cart
         var cart = document.createElement("a");
-        cart.setAttribute("href","detail.html")
+        cart.setAttribute("href","login-detail.html")
         cart.classList.add("cart", "detailProduct");
-        cart.setAttribute("data-product-index", product.id);
+        cart.setAttribute("data-product-index", product.id_products);
         cart.onclick = function() {
           storeProductIndex(this);
         };
@@ -143,7 +143,7 @@ fetch(endpoint2)
 
 
 // Buat product box paket nasional
-const endpoint = "https://dummyjson.com/products/";
+const endpoint = "https://lively-cape-toad.cyclic.app/products/category/1";
 
 fetch(endpoint)
   .then(response => {
@@ -170,8 +170,8 @@ fetch(endpoint)
         var p = document.createElement("p");
         var harga = document.createTextNode("Harga Paket Wisata:");
 
-         // Fungsi untuk memformat angka harga
-         function formatPrice(price) {
+        // Fungsi untuk memformat angka harga
+        function formatPrice(price) {
           return new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', minimumFractionDigits: 0, maximumFractionDigits: 0 }).format(price);
         }
         var formattedPrice = formatPrice(product.price);
@@ -194,9 +194,9 @@ fetch(endpoint)
 
         // buat link untuk button cart
         var cart = document.createElement("a");
-        cart.setAttribute("href","detail.html")
+        cart.setAttribute("href","login-detail.html")
         cart.classList.add("cart", "detailProduct");
-        cart.setAttribute("data-product-index", product.id);
+        cart.setAttribute("data-product-index", product.id_products);
         cart.onclick = function() {
           storeProductIndex(this);
         };

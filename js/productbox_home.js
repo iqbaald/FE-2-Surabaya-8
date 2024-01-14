@@ -1,5 +1,5 @@
-// Buat product box paket nasional
-const endpoint2 = "https://dummyjson.com/products";
+// Buat product box paket internationl
+const endpoint2 = "https://dummyjson.com/products/category/smartphones";
 
 fetch(endpoint2)
   .then(response => {
@@ -27,10 +27,16 @@ fetch(endpoint2)
         var title = document.createTextNode(product.title);
 
         var p = document.createElement("p");
-        var harga = document.createTextNode("Harga mulai dari:");
+        var harga = document.createTextNode("Harga paket trip:");
+
+        // Fungsi untuk memformat angka harga
+        function formatPrice(price) {
+          return new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', minimumFractionDigits: 0, maximumFractionDigits: 0 }).format(price);
+        }
+        var formattedPrice = formatPrice(product.price);
 
         var span = document.createElement("span");
-        var price = document.createTextNode("Rp. " + product.price);
+        var price = document.createTextNode(formattedPrice);
 
         // buat lokasi icon dan alamat
         var location = document.createElement("div");
@@ -40,18 +46,22 @@ fetch(endpoint2)
         var div_icon = document.createElement("div");
         var icon = document.createElement("img");
         icon.classList.add("icon")
-        icon.setAttribute("src", "/Source/Img/Icon/location.png");
+        icon.setAttribute("src", "Source/Img/Icon/location.png");
 
         var div_alamat = document.createElement("div");
-        var alamat = document.createTextNode(product.brand);
+        var alamat = document.createTextNode(product.location);
 
         // buat link untuk button cart
         var cart = document.createElement("a");
         cart.setAttribute("href","detail.html")
-        cart.classList.add("cart");
+        cart.classList.add("cart", "detailProduct");
+        cart.setAttribute("data-product-index", product.id);
+        cart.onclick = function() {
+          storeProductIndex(this);
+        };
 
         var cart_icon = document.createElement("img");
-        cart_icon.setAttribute("src", "/Source/Img/Icon/cart.png");
+        cart_icon.setAttribute("src", "Source/Img/Icon/cart.png");
 
         // append child
         productBox.appendChild(img);
@@ -80,8 +90,8 @@ fetch(endpoint2)
     console.log("Error", error);
   });
 
-  // buat produk box Paket Internasional
-const endpoint = "https://dummyjson.com/products";
+  // buat produk box Paket nasional
+const endpoint = "https://dummyjson.com/products/category/laptops";
 
 fetch(endpoint)
   .then(response => {
@@ -109,10 +119,15 @@ fetch(endpoint)
         var title = document.createTextNode(product.title);
 
         var p = document.createElement("p");
-        var harga = document.createTextNode("Harga mulai dari:");
+        var harga = document.createTextNode("Harga Paket Wisata:");
+        // Fungsi untuk memformat angka harga
+        function formatPrice(price) {
+          return new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', minimumFractionDigits: 0, maximumFractionDigits: 0 }).format(price);
+        }
+        var formattedPrice = formatPrice(product.price);
 
         var span = document.createElement("span");
-        var price = document.createTextNode("Rp. " + product.price);
+        var price = document.createTextNode(formattedPrice);
 
         // buat lokasi icon dan alamat
         var location = document.createElement("div");
@@ -122,18 +137,22 @@ fetch(endpoint)
         var div_icon = document.createElement("div");
         var icon = document.createElement("img");
         icon.classList.add("icon")
-        icon.setAttribute("src", "/Source/Img/Icon/location.png");
+        icon.setAttribute("src", "Source/Img/Icon/location.png");
 
         var div_alamat = document.createElement("div");
-        var alamat = document.createTextNode(product.brand);
+        var alamat = document.createTextNode(product.location);
 
         // buat link untuk button cart
         var cart = document.createElement("a");
-        cart.setAttribute("href","detail.html")
-        cart.classList.add("cart");
+        cart.setAttribute("href","detail.html");
+        cart.classList.add("cart", "detailProduct");        
+        cart.setAttribute("data-product-index", product.id);
+        cart.onclick = function() {
+          storeProductIndex(this);
+        };
 
         var cart_icon = document.createElement("img");
-        cart_icon.setAttribute("src", "/Source/Img/Icon/cart.png");
+        cart_icon.setAttribute("src", "Source/Img/Icon/cart.png");
 
         // append child
         productBox.appendChild(img);
@@ -161,3 +180,9 @@ fetch(endpoint)
   .catch(error => {
     console.log("Error", error);
   });
+
+  // menyimpan ke storage product index
+function storeProductIndex(element) {
+  const productIndex = element.getAttribute('data-product-index');
+  localStorage.setItem('selectedProductIndex', productIndex);
+}

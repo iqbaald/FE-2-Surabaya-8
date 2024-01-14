@@ -19,7 +19,7 @@
         <span class="hamburger-btn"
           ><img src="Source/Img/Icon/menu.png" style="width: 35px"
         /></span>
-        <a href="index.html" class="logo">
+        <a href="login-index.html" class="logo">
           <img src="Source/Img/Logo.png" alt="logo" />
         </a>
         <!-- Navbar Tengah -->
@@ -30,22 +30,49 @@
               style="height: 20px"
               alt="Close"
           /></span>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="explore.html">Explore</a></li>
-          <li><a href="aboutus.html" class="active">About Us</a></li>
-          <li><a href="contact.html">Be Our Partner</a></li>
+          <li><a href="login-index.html">Home</a></li>
+          <li><a href="login-explore.html">Explore</a></li>
+          <li><a href="login-aboutus.html" class="active">About Us</a></li>
+          <li><a href="login-contact.html">Be Our Partner</a></li>
         </ul>
         <!-- Navbar Kanan -->
         <!-- Before login -->
-        <button class="login-btn">Get Started</button>
+        <!-- <button class="login-btn">Get Started</button> -->
         <!-- After Login -->
-        <!-- <div class="profile">
-        <img src="Source/Img/profile.jpg" alt="foto profile" class="pp" />
-        <span>Robert Openhamer</span>
-        <i class="dropdown">
-          <img src="Source/Img/Icon/dropdown.png" alt="dropdown"/>
-        </i>
-      </div> -->
+        <div class="profile" onclick="toggleMenu()">
+          <img src="Source/Img/profile.png" alt="foto profile" class="pp" />
+          <span id="username"></span>
+          <i class="dropdown">
+            <img src="Source/Img/Icon/dropdown.png" alt="dropdown" />
+          </i>
+        </div>
+        <!-- Dropdown Menu -->
+        <div class="sub-menu-wrap" id="subMenu">
+          <div class="sub-menu">
+            <div class="user-info">
+              <img src="Source/Img/profile.png" />
+              <h2 id="username2"></h2>
+            </div>
+
+            <hr />
+
+            <a href="#" class="sub-menu-link">
+              <img src="Source/Img/Icon/user.png" />
+              <p>Akun Saya</p>
+              <span>></span>
+            </a>
+            <a href="list-transaction.html" class="sub-menu-link">
+              <img src="Source/Img/Icon/history.png" />
+              <p>Riwayat Transaksi</p>
+              <span>></span>
+            </a>
+            <a href="index.html" class="sub-menu-link">
+              <img src="Source/Img/Icon/logout.png" />
+              <p>Logout</p>
+              <span>></span>
+            </a>
+          </div>
+        </div>
       </nav>
     </header>
 
@@ -65,16 +92,15 @@
         </div>
         <div class="form-content">
           <h2>LOGIN</h2>
-          <form action="#" id="login-form" method="post">
+          <form action="login" method="post">
             <div class="input-field">
-              <input type="text" id="login-username" name="username" required />
+              <input type="text" id="login-username" required />
               <label>Username</label>
             </div>
             <div class="input-field">
-              <input type="password" id="login-pass" name="password" required />
+              <input type="password" id="login-pass" required />
               <label>Kata Sandi</label>
             </div>
-            <div id="error-message" class="error-message"></div>
             <a href="#" class="forgot-pass-link">Lupa kata sandi?</a>
             <button type="submit">Login</button>
           </form>
@@ -112,6 +138,7 @@
               <label>Buat kata sandi</label>
             </div>
 
+            <div id="error-message" class="error-message"></div>
             <div class="policy-text">
               <input type="checkbox" id="policy" />
               <label for="policy">

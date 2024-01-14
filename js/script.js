@@ -2,8 +2,10 @@ const navbarMenu = document.querySelector(".navbar .links");
 const hamburgerBtn = document.querySelector(".hamburger-btn");
 const hideMenuBtn = navbarMenu.querySelector(".close-btn");
 const showPopupBtn = document.querySelector(".login-btn");
+const showPopupBtn2 = document.querySelector(".login-btn2");
 const formPopup = document.querySelector(".form-popup");
 const hidePopupBtn = formPopup.querySelector(".close-btn");
+const hidePopupBtn2 = formPopup.querySelector(".close-btn2");
 const signupLoginLink = formPopup.querySelectorAll(".bottom-link a");
 
 // profile menu
@@ -25,6 +27,8 @@ showPopupBtn.addEventListener("click", () => {
   document.body.classList.toggle("show-popup");
 });
 
+
+
 // Hide login popup
 hidePopupBtn.addEventListener("click", () => showPopupBtn.click());
 
@@ -38,53 +42,8 @@ signupLoginLink.forEach((link) => {
   });
 });
 
-// Light Slider
-$(document).ready(function () {
-  $("#autoWidth").lightSlider({
-    autoWidth: true,
-    loop: true,
-    onSliderLoad: function () {
-      $("#autoWidth").removeClass("cS-hidden");
-    },
-  });
-});
-
-// Light Slider 2
-$(document).ready(function () {
-  $("#autoWidthh").lightSlider({
-    autoWidth: true,
-    loop: true,
-    onSliderLoad: function () {
-      $("#autoWidthh").removeClass("cS-hidden");
-    },
-  });
-});
-
 function newFunction() {
   return "subMenu";
 }
 
-// Detail Page
-const imgs = document.querySelectorAll(".img-select a");
-const imgBtns = [...imgs];
-let imgId = 1;
 
-imgBtns.forEach((imgItem) => {
-  imgItem.addEventListener("click", (event) => {
-    event.preventDefault();
-    imgId = imgItem.dataset.id;
-    slideImage();
-  });
-});
-
-function slideImage() {
-  const displayWidth = document.querySelector(
-    ".img-showcase img:first-child"
-  ).clientWidth;
-
-  document.querySelector(".img-showcase").style.transform = `translateX(${
-    -(imgId - 1) * displayWidth
-  }px)`;
-}
-
-window.addEventListener("resize", slideImage);
