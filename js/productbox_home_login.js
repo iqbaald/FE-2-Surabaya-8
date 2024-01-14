@@ -1,5 +1,5 @@
 // Buat product box paket internasional
-const endpoint2 = "https://lively-cape-toad.cyclic.app/products/category/2";
+const endpoint2 = "https://dummyjson.com/products/category/smartphones";
 
 
 fetch(endpoint2)
@@ -56,7 +56,7 @@ fetch(endpoint2)
         var cart = document.createElement("a");
         cart.setAttribute("href","login-detail.html")
         cart.classList.add("cart", "detailProduct");
-        cart.setAttribute("data-product-index", product.id_products);
+        cart.setAttribute("data-product-index", product.id);
         cart.onclick = function() {
           storeProductIndex(this);
         };
@@ -92,7 +92,7 @@ fetch(endpoint2)
   });
 
   // buat produk box Paket nasional
-const endpoint = "https://lively-cape-toad.cyclic.app/products/category/1";
+  const endpoint = "https://dummyjson.com/products/category/laptops";
 
 fetch(endpoint)
   .then(response => {
@@ -148,7 +148,7 @@ fetch(endpoint)
         var cart = document.createElement("a");
         cart.setAttribute("href","login-detail.html");
         cart.classList.add("cart", "detailProduct");
-        cart.setAttribute("data-product-index", product.id_products);
+        cart.setAttribute("data-product-index", product.id);
         cart.onclick = function() {
           storeProductIndex(this);
         };
